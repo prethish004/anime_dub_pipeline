@@ -1,9 +1,3 @@
-Nice, this content is already **very strong** 👍
-Below is a **clean, ready-to-use `README.md` file** created **directly from your content**, properly formatted and polished for GitHub.
-
-👉 Just **copy–paste this into a file named `README.md`** in your project root.
-
----
 
 ```markdown
 # 🎬 AI Anime Dubbing Pipeline
