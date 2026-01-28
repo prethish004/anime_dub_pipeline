@@ -1,5 +1,3 @@
-
-```markdown
 # 🎬 AI Anime Dubbing Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
