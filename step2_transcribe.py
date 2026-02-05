@@ -58,58 +58,60 @@ def load_model(device, torch_dtype):
         return None, None
 
 def transcribe_audio_direct(model, processor, audio, device):
-    """Transcribe audio using Whisper's generate method"""
-    
-    print(f"\n🎙️ Transcribing audio...")
-    print("⏳ This may take several minutes on CPU...")
-    print("   (For a 5-minute video, expect 10-15 minutes on CPU)")
-    
+    print("\n🎙️ Transcribing audio with chunking...")
+    print("⏳ CPU mode – chunk-based processing")
+
+    SAMPLE_RATE = 16000
+    CHUNK_SECONDS = 30
+    chunk_size = SAMPLE_RATE * CHUNK_SECONDS
+
+    forced_decoder_ids = processor.get_decoder_prompt_ids(
+        language="japanese",
+        task="transcribe"
+    )
+
+    all_text = []
     start_time = datetime.now()
-    
-    try:
-        # Prepare audio for model
-        input_features = processor(
-            audio, 
-            sampling_rate=16000, 
+
+    for i in range(0, len(audio), chunk_size):
+        chunk = audio[i:i + chunk_size]
+        chunk_start_sec = i / SAMPLE_RATE
+
+        print(f"   ▶ Chunk {int(chunk_start_sec)}s – {int(chunk_start_sec + CHUNK_SECONDS)}s")
+
+        inputs = processor(
+            chunk,
+            sampling_rate=16000,
             return_tensors="pt"
-        ).input_features
-        
-        input_features = input_features.to(device)
-        
-        # Force Japanese language
-        forced_decoder_ids = processor.get_decoder_prompt_ids(
-            language="japanese", 
-            task="transcribe"
-        )
-        
-        # Generate transcription with timestamps
-        print("   Processing... (this is the slow part)")
-        predicted_ids = model.generate(
-            input_features,
-            forced_decoder_ids=forced_decoder_ids,
-            return_timestamps=True,
-            max_new_tokens=440  # Max tokens per chunk
-        )
-        
-        # Decode with timestamps
-        transcription = processor.batch_decode(
-            predicted_ids, 
+        ).input_features.to(device)
+
+        with torch.no_grad():
+            predicted_ids = model.generate(
+                inputs,
+                forced_decoder_ids=forced_decoder_ids,
+                return_timestamps=True,
+                max_new_tokens=440
+            )
+
+        text = processor.batch_decode(
+            predicted_ids,
             skip_special_tokens=False,
             decode_with_timestamps=True
-        )
-        
-        end_time = datetime.now()
-        duration = (end_time - start_time).total_seconds()
-        
-        print(f"✅ Transcription complete! ({duration:.1f} seconds)")
-        
-        return transcription[0]
-    
-    except Exception as e:
-        print(f"❌ Transcription error: {e}")
-        import traceback
-        traceback.print_exc()
-        return None
+        )[0]
+
+        # Shift timestamps manually
+        import re
+        def shift_timestamp(match):
+            t = float(match.group(1))
+            return f"<|{t + chunk_start_sec:.2f}|>"
+
+        text = re.sub(r"<\|(\d+\.\d+)\|>", shift_timestamp, text)
+        all_text.append(text)
+
+    duration = (datetime.now() - start_time).total_seconds()
+    print(f"✅ Transcription complete! ({duration:.1f}s)")
+
+    return "".join(all_text)
 
 def parse_whisper_output(transcription_text):
     """Parse Whisper output with timestamps into segments"""

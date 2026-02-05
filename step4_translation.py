@@ -945,12 +945,16 @@ import time
 from openai import OpenAI
 from datetime import datetime
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()  # ← this line is mandatory
 
 # Configuration
 TRANSCRIPTION_FILE = "work/transcription_with_speakers.json"
 EMOTION_FILE = "work/emotion_detection.json"
 OUTPUT_JSON = "work/translated_segments_interactive.json"
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# OPENAI_API_KEY = "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"
 
 # Translation settings
 SOURCE_LANGUAGE = "Japanese"

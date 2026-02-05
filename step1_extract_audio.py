@@ -4,7 +4,7 @@ import os
 from pydub import AudioSegment
 
 # Configuration
-INPUT_VIDEO = "input/anime_sample.mp4"
+INPUT_VIDEO = "input/Seikon no Qwaser - S01E01 - [9DBF3AAE] (online-video-cutter.com).mp4"
 OUTPUT_AUDIO_RAW = "work/audio_raw.wav"
 OUTPUT_AUDIO_16K = "work/audio_16k.wav"
 
