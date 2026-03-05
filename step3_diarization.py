@@ -718,12 +718,12 @@ import torch.nn as nn
 from datetime import datetime
 
 # Configuration
-AUDIO_FILE = "work/audio_16k.wav"
+AUDIO_FILE = "separated/htdemucs/audio_16k/vocals.wav"
 TRANSCRIPTION_FILE = "work/transcription.json"
 OUTPUT_JSON = "work/transcription_with_speakers.json"
 
 # HuggingFace token
-HF_TOKEN = "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"
+HF_TOKEN = "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"
 
 # Age/Gender model
 AGE_GENDER_MODEL = "audeering/wav2vec2-large-robust-24-ft-age-gender"
@@ -842,16 +842,30 @@ def run_diarization(audio):
         
         # Load diarization pipeline
         print("   Loading pyannote model...")
+        # pipeline = Pipeline.from_pretrained(
+        #     "pyannote/speaker-diarization-3.1",
+        #     use_auth_token=HF_TOKEN
+        # )
+        # pipeline = pipeline.to(device)
+        # In pipeline config (before running)
         pipeline = Pipeline.from_pretrained(
             "pyannote/speaker-diarization-3.1",
-            use_auth_token=HF_TOKEN
+            token=HF_TOKEN
         )
+        pipeline.segmentation_batch_size = 32  # More sensitive
+        pipeline.embedding_batch_size = 32
         pipeline = pipeline.to(device)
-        
         print(f"   Processing audio...")
         
         # Run diarization on audio dictionary
-        diarization = pipeline(audio)
+        # diarization = pipeline(audio)
+        diarization = pipeline(AUDIO_FILE)
+
+# FIXED (force more speakers)
+        diarization = pipeline(
+            AUDIO_FILE,
+            min_speakers=3,        # At least 3 speakers
+            max_speakers=7, )      # Up to 7 (for anime cast)
         
         print("✅ Diarization complete!")
         
@@ -873,8 +887,10 @@ def extract_speaker_segments(diarization):
     
     speaker_segments = []
     speakers_found = set()
-    
-    for segment, _, speaker in diarization.itertracks(yield_label=True):
+    annotation = diarization.speaker_diarization
+
+    for segment, _, speaker in annotation.itertracks(yield_label=True):
+    # for segment, _, speaker in diarization.itertracks(yield_label=True):
         speaker_segments.append({
             'speaker': speaker,
             'start': segment.start,
@@ -1095,7 +1111,7 @@ def assign_speakers_to_transcription(transcription_data, speaker_segments):
         
         # Find which speaker segment this transcription belongs to
         assigned_speaker = None
-        best_overlap = 0
+        best_overlap = 0.3
         
         for spk_seg in speaker_segments:
             if spk_seg['start'] <= trans_mid <= spk_seg['end']:

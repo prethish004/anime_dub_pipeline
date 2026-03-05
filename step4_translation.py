@@ -987,20 +987,44 @@ def load_transcription():
     return data
 
 
-def load_emotions():
-    """Load emotion detection results if available"""
-    if os.path.exists(EMOTION_FILE):
-        with open(EMOTION_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+# def load_emotions():
+#     """Load emotion detection results if available"""
+#     if os.path.exists(EMOTION_FILE):
+#         with open(EMOTION_FILE, 'r', encoding='utf-8') as f:
+#             data = json.load(f)
         
-        # Create emotion map
-        emotion_map = {e['segment_id']: e for e in data['emotions']}
-        print(f"🎭 Loaded emotions for {len(emotion_map)} segments")
-        return emotion_map
-    else:
-        print(f"⚠️  No emotion file found (optional)")
+#         # Create emotion map
+#         emotion_map = {e['segment_id']: e for e in data['emotions']}
+#         print(f"🎭 Loaded emotions for {len(emotion_map)} segments")
+#         return emotion_map
+#     else:
+#         print(f"⚠️  No emotion file found (optional)")
+#         return {}
+
+def load_emotions():
+    """Load emotion detection results (compatible with new format)"""
+    if not os.path.exists(EMOTION_FILE):
+        print("⚠️  No emotion file found (optional)")
         return {}
 
+    with open(EMOTION_FILE, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    emotion_map = {}
+
+    # 🔥 New format: speakers → seg_ids
+    segment_counter = 1
+
+    for speaker, segments in data.get("speakers", {}).items():
+        for seg_id, seg_data in segments.items():
+            emotion_map[segment_counter] = {
+                "emotion": seg_data.get("emotion", "neutral"),
+                "confidence": seg_data.get("confidence", 0.0)
+            }
+            segment_counter += 1
+
+    print(f"🎭 Loaded emotions for {len(emotion_map)} segments")
+    return emotion_map
 
 def estimate_syllable_count(text):
     """Estimate syllable count for English text"""
@@ -1025,162 +1049,358 @@ def estimate_duration(text, syllables_per_second=3.5):
     return duration
 
 
-def generate_translation_attempts(client, segment, original_duration, emotion_info=None):
-    """Generate 3 translation attempts with different strategies"""
+# def generate_translation_attempts(client, segment, original_duration, emotion_info=None):
+#     """Generate 3 translation attempts with different strategies"""
     
+#     japanese_text = segment['text']
+#     speaker = segment.get('speaker', 'UNKNOWN')
+    
+#     # Get emotion context
+#     emotion = None
+#     emotion_tag = ""
+#     if emotion_info:
+#         emotion = emotion_info.get('emotion', 'neutral')
+#         emotion_tag = emotion_info.get('emotion_tag', '')
+    
+#     attempts = []
+    
+#     # Attempt 1: Natural translation (prioritize meaning)
+#     print(f"\n   Generating Attempt 1 (Natural)...", end=' ')
+#     prompt1 = f"""Translate this Japanese anime dialogue to English.
+# Prioritize natural, conversational English that sounds authentic.
+
+# Japanese: {japanese_text}
+# Emotion: {emotion if emotion else 'neutral'}
+# Speaker: {speaker}
+
+# Provide ONLY the English translation, nothing else."""
+    
+#     try:
+#         response1 = client.chat.completions.create(
+#             model="gpt-4o-mini",
+#             messages=[{"role": "user", "content": prompt1}],
+#             temperature=0.7
+#         )
+#         translation1 = response1.choices[0].message.content.strip()
+#         syllables1 = estimate_syllable_count(translation1)
+#         duration1 = estimate_duration(translation1)
+#         ratio1 = duration1 / original_duration if original_duration > 0 else 0
+        
+#         attempts.append({
+#             'attempt': 1,
+#             'strategy': 'Natural',
+#             'translation': translation1,
+#             'syllables': syllables1,
+#             'estimated_duration': round(duration1, 2),
+#             'duration_ratio': round(ratio1, 2),
+#             'emotion_tag': emotion_tag
+#         })
+#         print(f"✅ ({syllables1} syllables, {ratio1:.2f}x)")
+#     except Exception as e:
+#         print(f"❌ Error: {str(e)[:40]}")
+#         attempts.append({
+#             'attempt': 1,
+#             'strategy': 'Natural',
+#             'translation': '[ERROR]',
+#             'syllables': 0,
+#             'estimated_duration': 0,
+#             'duration_ratio': 0,
+#             'emotion_tag': emotion_tag
+#         })
+    
+#     time.sleep(0.5)  # Rate limiting
+    
+#     # Attempt 2: Duration-matched (adjust length to match timing)
+#     print(f"   Generating Attempt 2 (Duration-matched)...", end=' ')
+#     prompt2 = f"""Translate this Japanese anime dialogue to English.
+# IMPORTANT: The translation should take approximately {original_duration:.1f} seconds to speak.
+# Adjust word count to match the duration (aim for {int(original_duration * 3.5)} syllables).
+
+# Japanese: {japanese_text}
+# Emotion: {emotion if emotion else 'neutral'}
+# Speaker: {speaker}
+# Original Duration: {original_duration:.2f}s
+
+# Provide ONLY the English translation, nothing else."""
+    
+#     try:
+#         response2 = client.chat.completions.create(
+#             model="gpt-4o-mini",
+#             messages=[{"role": "user", "content": prompt2}],
+#             temperature=0.7
+#         )
+#         translation2 = response2.choices[0].message.content.strip()
+#         syllables2 = estimate_syllable_count(translation2)
+#         duration2 = estimate_duration(translation2)
+#         ratio2 = duration2 / original_duration if original_duration > 0 else 0
+        
+#         attempts.append({
+#             'attempt': 2,
+#             'strategy': 'Duration-matched',
+#             'translation': translation2,
+#             'syllables': syllables2,
+#             'estimated_duration': round(duration2, 2),
+#             'duration_ratio': round(ratio2, 2),
+#             'emotion_tag': emotion_tag
+#         })
+#         print(f"✅ ({syllables2} syllables, {ratio2:.2f}x)")
+#     except Exception as e:
+#         print(f"❌ Error: {str(e)[:40]}")
+#         attempts.append({
+#             'attempt': 2,
+#             'strategy': 'Duration-matched',
+#             'translation': '[ERROR]',
+#             'syllables': 0,
+#             'estimated_duration': 0,
+#             'duration_ratio': 0,
+#             'emotion_tag': emotion_tag
+#         })
+    
+#     time.sleep(0.5)  # Rate limiting
+    
+#     # Attempt 3: Refined (balance meaning + duration)
+#     print(f"   Generating Attempt 3 (Refined)...", end=' ')
+#     prompt3 = f"""Translate this Japanese anime dialogue to English.
+# Balance natural meaning with appropriate duration ({original_duration:.1f}s).
+# Use emotion-appropriate language.
+
+# Japanese: {japanese_text}
+# Emotion: {emotion if emotion else 'neutral'}
+# Speaker: {speaker}
+# Original Duration: {original_duration:.2f}s
+# Target syllables: {int(original_duration * 3.5)}
+
+# Provide ONLY the English translation, nothing else."""
+    
+#     try:
+#         response3 = client.chat.completions.create(
+#             model="gpt-4o-mini",
+#             messages=[{"role": "user", "content": prompt3}],
+#             temperature=0.8
+#         )
+#         translation3 = response3.choices[0].message.content.strip()
+#         syllables3 = estimate_syllable_count(translation3)
+#         duration3 = estimate_duration(translation3)
+#         ratio3 = duration3 / original_duration if original_duration > 0 else 0
+        
+#         attempts.append({
+#             'attempt': 3,
+#             'strategy': 'Refined',
+#             'translation': translation3,
+#             'syllables': syllables3,
+#             'estimated_duration': round(duration3, 2),
+#             'duration_ratio': round(ratio3, 2),
+#             'emotion_tag': emotion_tag
+#         })
+#         print(f"✅ ({syllables3} syllables, {ratio3:.2f}x)")
+#     except Exception as e:
+#         print(f"❌ Error: {str(e)[:40]}")
+#         attempts.append({
+#             'attempt': 3,
+#             'strategy': 'Refined',
+#             'translation': '[ERROR]',
+#             'syllables': 0,
+#             'estimated_duration': 0,
+#             'duration_ratio': 0,
+#             'emotion_tag': emotion_tag
+#         })
+    
+#     return attempts
+# def generate_translation_attempts(client, segment, original_duration, emotion_info=None):
+    
+#     japanese_text = segment['text']
+#     speaker = segment.get('speaker', 'UNKNOWN')
+#     emotion = emotion_info.get('emotion', 'neutral') if emotion_info else "neutral"
+
+#     target_syllables = int(original_duration * 3.5)
+#     prompt = f"""
+#     You are a professional anime dubbing script adapter.
+
+#     Translate the Japanese dialogue into natural spoken English suitable for anime dubbing.
+
+#     Requirements:
+#     - Keep emotional tone: {emotion}.
+#     - Spoken dialogue only.
+#     - No explanations.
+#     - No stage directions.
+#     - No time references.
+#     - Keep similar speaking duration (~{original_duration:.2f} seconds).
+#     - Target approximately {int(original_duration * 3.5)} syllables.
+#     - Minimum {int(original_duration * 3.0)} syllables.
+#     - Maximum {int(original_duration * 4.0)} syllables.
+#     - Slight expansion is allowed to match timing.
+#     - Avoid very short replies unless dramatically required.
+
+#     Return JSON:
+#     {{
+#     "natural": "...",
+#     "duration_matched": "...",
+#     "refined": "..."
+#     }}
+
+#     Japanese:
+#     {japanese_text}
+# """
+# #     prompt = f"""
+# # You are a professional anime dubbing script adapter.
+
+# # Task:
+# # Translate the Japanese dialogue into natural spoken English suitable for anime dubbing.
+
+# # Requirements:
+# # - Sound like spoken dialogue, not written translation.
+# # - Keep emotional tone: {emotion}.
+# # - Keep similar speaking duration (~{original_duration:.2f} seconds).
+# # - Target around {target_syllables} syllables.
+# # - Prioritize rhythm and lip-sync friendliness.
+# # - Avoid overly long words.
+# # - Short, punchy phrasing preferred.
+# # - Do NOT explain anything.
+
+# # Return EXACTLY this JSON format:
+
+# # {{
+# #   "natural": "...",
+# #   "duration_matched": "...",
+# #   "refined": "..."
+# # }}
+
+# # Japanese:
+# # {japanese_text}
+# # """
+
+#     # response = client.chat.completions.create(
+#     #     model="gpt-4o-mini",
+#     #     messages=[{"role": "user", "content": prompt}],
+#     #     temperature=0.8
+#     # )
+#     response = client.chat.completions.create(
+#         model="gpt-4o-mini",
+#         messages=[{"role": "user", "content": prompt}],
+#         temperature=0.8,
+#         response_format={"type": "json_object"}  # 🔥 THIS IS IMPORTANT
+#     )
+#     content = response.choices[0].message.content.strip()
+
+#     try:
+#         translations = json.loads(content)
+#     except:
+#         print("⚠ JSON parsing failed, fallback to raw text")
+#         translations = {
+#             "natural": content,
+#             "duration_matched": content,
+#             "refined": content
+#         }
+
+#     attempts = []
+#     for i, key in enumerate(["natural", "duration_matched", "refined"], start=1):
+#         text = translations.get(key, "")
+
+#         syllables = estimate_syllable_count(text)
+#         duration = estimate_duration(text)
+#         ratio = duration / original_duration if original_duration > 0 else 0
+
+#         attempts.append({
+#             "attempt": i,
+#             "strategy": key,
+#             "translation": text,
+#             "syllables": syllables,
+#             "estimated_duration": round(duration, 2),
+#             "duration_ratio": round(ratio, 2),
+#             "emotion_tag": emotion.upper()
+#         })
+
+#     return attempts
+def generate_translation_attempts(client, segment, original_duration, emotion_info=None):
     japanese_text = segment['text']
     speaker = segment.get('speaker', 'UNKNOWN')
-    
-    # Get emotion context
-    emotion = None
-    emotion_tag = ""
-    if emotion_info:
-        emotion = emotion_info.get('emotion', 'neutral')
-        emotion_tag = emotion_info.get('emotion_tag', '')
-    
+    emotion = emotion_info.get('emotion', 'neutral') if emotion_info else "neutral"
+
+    target_syllables = int(original_duration * 3.5)
+
+    prompt = f"""
+You are an experienced ADR script adapter for Japanese anime.
+
+Your job is NOT to translate literally.
+Your job is to write NATURAL, PERFORMABLE ENGLISH LINES that:
+- Keep the same intent and emotion as the Japanese
+- Fit the character's mouth flaps and timing
+- Sound like real anime dub dialogue in English
+
+You may:
+- Change wording and sentence structure
+- Add or remove small words ("well", "hey", "come on", etc.)
+- Slightly strengthen or soften expressions
+as long as the emotional meaning stays the same.
+
+Technical constraints:
+- Original language: {SOURCE_LANGUAGE}
+- Target language: {TARGET_LANGUAGE}
+- Emotional tone: {emotion}
+- Original speaking duration: ~{original_duration:.2f} seconds
+- Target around {target_syllables} English syllables
+- Minimum: {int(original_duration * 3.0)} syllables
+- Maximum: {int(original_duration * 4.0)} syllables
+
+Priorities (in order):
+1) Timing and rhythm for lip-sync (length & beats similar to Japanese)
+2) Emotional impact and character voice
+3) Semantic faithfulness (core meaning, not word-for-word)
+
+Avoid:
+- Explanations, notes, or stage directions
+- Brackets like [sighs], [gasps] etc.
+- Timecodes or any meta text
+
+Return EXACTLY this JSON object (no extra text):
+
+{{
+  "natural": "Most natural English line for general dub (can be slightly free).",
+  "duration_matched": "Version tuned closest to the original timing.",
+  "refined": "Best compromise between timing, emotion, and natural English."
+}}
+
+Japanese line:
+{japanese_text}
+"""
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.9,  # a bit more creative for adaptation
+        response_format={"type": "json_object"}
+    )
+
+    content = response.choices[0].message.content.strip()
+
+    try:
+        translations = json.loads(content)
+    except:
+        print("⚠ JSON parsing failed, fallback to raw text")
+        translations = {
+            "natural": content,
+            "duration_matched": content,
+            "refined": content
+        }
+
     attempts = []
-    
-    # Attempt 1: Natural translation (prioritize meaning)
-    print(f"\n   Generating Attempt 1 (Natural)...", end=' ')
-    prompt1 = f"""Translate this Japanese anime dialogue to English.
-Prioritize natural, conversational English that sounds authentic.
+    for i, key in enumerate(["natural", "duration_matched", "refined"], start=1):
+        text = translations.get(key, "").strip()
 
-Japanese: {japanese_text}
-Emotion: {emotion if emotion else 'neutral'}
-Speaker: {speaker}
+        syllables = estimate_syllable_count(text)
+        duration = estimate_duration(text)
+        ratio = duration / original_duration if original_duration > 0 else 0
 
-Provide ONLY the English translation, nothing else."""
-    
-    try:
-        response1 = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt1}],
-            temperature=0.7
-        )
-        translation1 = response1.choices[0].message.content.strip()
-        syllables1 = estimate_syllable_count(translation1)
-        duration1 = estimate_duration(translation1)
-        ratio1 = duration1 / original_duration if original_duration > 0 else 0
-        
         attempts.append({
-            'attempt': 1,
-            'strategy': 'Natural',
-            'translation': translation1,
-            'syllables': syllables1,
-            'estimated_duration': round(duration1, 2),
-            'duration_ratio': round(ratio1, 2),
-            'emotion_tag': emotion_tag
+            "attempt": i,
+            "strategy": key,
+            "translation": text,
+            "syllables": syllables,
+            "estimated_duration": round(duration, 2),
+            "duration_ratio": round(ratio, 2),
+            "emotion_tag": emotion.upper()
         })
-        print(f"✅ ({syllables1} syllables, {ratio1:.2f}x)")
-    except Exception as e:
-        print(f"❌ Error: {str(e)[:40]}")
-        attempts.append({
-            'attempt': 1,
-            'strategy': 'Natural',
-            'translation': '[ERROR]',
-            'syllables': 0,
-            'estimated_duration': 0,
-            'duration_ratio': 0,
-            'emotion_tag': emotion_tag
-        })
-    
-    time.sleep(0.5)  # Rate limiting
-    
-    # Attempt 2: Duration-matched (adjust length to match timing)
-    print(f"   Generating Attempt 2 (Duration-matched)...", end=' ')
-    prompt2 = f"""Translate this Japanese anime dialogue to English.
-IMPORTANT: The translation should take approximately {original_duration:.1f} seconds to speak.
-Adjust word count to match the duration (aim for {int(original_duration * 3.5)} syllables).
 
-Japanese: {japanese_text}
-Emotion: {emotion if emotion else 'neutral'}
-Speaker: {speaker}
-Original Duration: {original_duration:.2f}s
-
-Provide ONLY the English translation, nothing else."""
-    
-    try:
-        response2 = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt2}],
-            temperature=0.7
-        )
-        translation2 = response2.choices[0].message.content.strip()
-        syllables2 = estimate_syllable_count(translation2)
-        duration2 = estimate_duration(translation2)
-        ratio2 = duration2 / original_duration if original_duration > 0 else 0
-        
-        attempts.append({
-            'attempt': 2,
-            'strategy': 'Duration-matched',
-            'translation': translation2,
-            'syllables': syllables2,
-            'estimated_duration': round(duration2, 2),
-            'duration_ratio': round(ratio2, 2),
-            'emotion_tag': emotion_tag
-        })
-        print(f"✅ ({syllables2} syllables, {ratio2:.2f}x)")
-    except Exception as e:
-        print(f"❌ Error: {str(e)[:40]}")
-        attempts.append({
-            'attempt': 2,
-            'strategy': 'Duration-matched',
-            'translation': '[ERROR]',
-            'syllables': 0,
-            'estimated_duration': 0,
-            'duration_ratio': 0,
-            'emotion_tag': emotion_tag
-        })
-    
-    time.sleep(0.5)  # Rate limiting
-    
-    # Attempt 3: Refined (balance meaning + duration)
-    print(f"   Generating Attempt 3 (Refined)...", end=' ')
-    prompt3 = f"""Translate this Japanese anime dialogue to English.
-Balance natural meaning with appropriate duration ({original_duration:.1f}s).
-Use emotion-appropriate language.
-
-Japanese: {japanese_text}
-Emotion: {emotion if emotion else 'neutral'}
-Speaker: {speaker}
-Original Duration: {original_duration:.2f}s
-Target syllables: {int(original_duration * 3.5)}
-
-Provide ONLY the English translation, nothing else."""
-    
-    try:
-        response3 = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt3}],
-            temperature=0.8
-        )
-        translation3 = response3.choices[0].message.content.strip()
-        syllables3 = estimate_syllable_count(translation3)
-        duration3 = estimate_duration(translation3)
-        ratio3 = duration3 / original_duration if original_duration > 0 else 0
-        
-        attempts.append({
-            'attempt': 3,
-            'strategy': 'Refined',
-            'translation': translation3,
-            'syllables': syllables3,
-            'estimated_duration': round(duration3, 2),
-            'duration_ratio': round(ratio3, 2),
-            'emotion_tag': emotion_tag
-        })
-        print(f"✅ ({syllables3} syllables, {ratio3:.2f}x)")
-    except Exception as e:
-        print(f"❌ Error: {str(e)[:40]}")
-        attempts.append({
-            'attempt': 3,
-            'strategy': 'Refined',
-            'translation': '[ERROR]',
-            'syllables': 0,
-            'estimated_duration': 0,
-            'duration_ratio': 0,
-            'emotion_tag': emotion_tag
-        })
-    
     return attempts
 
 
@@ -1280,9 +1500,24 @@ def get_user_choice(segment, attempts):
                     attempts[attempt_idx]['duration_ratio'] = attempts[attempt_idx]['estimated_duration'] / segment['duration']
                     
                     print(f"   ✅ Updated!")
-                    print(f"   New syllables: {attempts[attempt_idx]['syllables']}")
-                    print(f"   New duration: {attempts[attempt_idx]['estimated_duration']:.2f}s")
-                    print(f"   New ratio: {attempts[attempt_idx]['duration_ratio']:.2f}x")
+                    # print(f"   New syllables: {attempts[attempt_idx]['syllables']}")
+                    # print(f"   New duration: {attempts[attempt_idx]['estimated_duration']:.2f}s")
+                    # print(f"   New ratio: {attempts[attempt_idx]['duration_ratio']:.2f}x")
+                    syllables = attempts[attempt_idx]['syllables']
+                    duration = attempts[attempt_idx]['estimated_duration']
+                    ratio = attempts[attempt_idx]['duration_ratio']
+
+                    if 0.95 <= ratio <= 1.05:
+                        quality = "🎯 Perfect"
+                    elif 0.85 <= ratio <= 1.15:
+                        quality = "✅ Good"
+                    elif 0.70 <= ratio <= 1.30:
+                        quality = "⚠️ Acceptable"
+                    else:
+                        quality = "❌ Poor"
+
+                    print(f"\n   Updated Metrics:")
+                    print(f"   Syllables: {syllables} | Duration: {duration:.2f}s | Ratio: {ratio:.2f}x | {quality}")
                     
                     # Ask if they want to use this
                     use_it = input("\n   Use this version? [Y/n]: ").strip().upper()

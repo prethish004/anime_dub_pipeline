@@ -45,3 +45,4 @@ pytorch-lightning==2.2.5
 torch==2.1.2
 torchaudio==2.1.2
 pip install torch==2.0.1 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu
+pip install demucs librosa soundfile

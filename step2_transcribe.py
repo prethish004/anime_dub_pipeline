@@ -6,9 +6,11 @@ import librosa
 import numpy as np
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
 from datetime import datetime
+from pydub import AudioSegment
+from pydub.silence import detect_nonsilent
 
 # Configuration
-AUDIO_FILE = "work/audio_16k.wav"
+AUDIO_FILE = "separated/htdemucs/audio_16k/vocals.wav"
 OUTPUT_JSON = "work/transcription.json"
 MODEL_NAME = "openai/whisper-large-v3"
 
@@ -79,25 +81,47 @@ def transcribe_audio_direct(model, processor, audio, device):
 
         print(f"   ▶ Chunk {int(chunk_start_sec)}s – {int(chunk_start_sec + CHUNK_SECONDS)}s")
 
+        # inputs = processor(
+        #     chunk,
+        #     sampling_rate=16000,
+        #     return_tensors="pt"
+        # ).input_features.to(device)
+
+        # with torch.no_grad():
+        #     predicted_ids = model.generate(
+        #         inputs,
+        #         forced_decoder_ids=forced_decoder_ids,
+        #         return_timestamps=True,
+        #         max_new_tokens=440
+        #     )
         inputs = processor(
             chunk,
             sampling_rate=16000,
             return_tensors="pt"
-        ).input_features.to(device)
+        )
+
+        input_features = inputs.input_features.to(device)
 
         with torch.no_grad():
             predicted_ids = model.generate(
-                inputs,
-                forced_decoder_ids=forced_decoder_ids,
+                input_features,
+                task="transcribe",
+                language="japanese",
                 return_timestamps=True,
                 max_new_tokens=440
             )
 
-        text = processor.batch_decode(
-            predicted_ids,
-            skip_special_tokens=False,
+        text = processor.decode(
+            predicted_ids[0],
+            skip_special_tokens=True,
             decode_with_timestamps=True
-        )[0]
+        )
+
+        # text = processor.batch_decode(
+        #     predicted_ids,
+        #     skip_special_tokens=False,
+        #     decode_with_timestamps=True
+        # )[0]
 
         # Shift timestamps manually
         import re
@@ -198,6 +222,35 @@ def save_results(segments):
     
     print(f"💾 Saved to: {OUTPUT_JSON}")
 
+def refine_segment_timings(segments):
+    print("🔍 Refining segment timing with silence detection...")
+
+    full_audio = AudioSegment.from_wav(AUDIO_FILE)
+    refined_segments = []
+
+    for seg in segments:
+        start_ms = int(seg["start"] * 1000)
+        end_ms = int(seg["end"] * 1000)
+
+        clip_audio = full_audio[start_ms:end_ms]
+
+        nonsilent_parts = detect_nonsilent(
+            clip_audio,
+            min_silence_len=200,
+            silence_thresh=clip_audio.dBFS - 16,
+        )
+
+        if nonsilent_parts:
+            new_start_offset = nonsilent_parts[0][0]  # first speech
+            new_start = seg["start"] + (new_start_offset / 1000.0)
+
+            seg["start"] = round(new_start, 3)
+            seg["duration"] = round(seg["end"] - seg["start"], 3)
+
+        refined_segments.append(seg)
+
+    return refined_segments
+
 def display_preview(segments):
     """Display first few segments"""
     
@@ -241,6 +294,7 @@ def main():
     
     # Parse into segments
     segments = parse_whisper_output(transcription_text)
+    segments = refine_segment_timings(segments)
     
     # Save to JSON
     save_results(segments)

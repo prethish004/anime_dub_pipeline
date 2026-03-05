@@ -4,7 +4,7 @@ __pycache__/
 
 # Virtual environment
 venv/
-
+venvv/
 # Runtime folders
 output/
 work/
