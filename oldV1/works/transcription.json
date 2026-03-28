@@ -1,0 +1,162 @@
+{
+  "model": "openai/whisper-large-v3",
+  "language": "japanese",
+  "timestamp": "2026-03-17T16:50:56.987334",
+  "total_segments": 22,
+  "segments": [
+    {
+      "id": 0,
+      "start": 8.569,
+      "end": 10.0,
+      "text": "ここは…",
+      "duration": 1.431
+    },
+    {
+      "id": 1,
+      "start": 11.22,
+      "end": 14.0,
+      "text": "母さん…",
+      "duration": 2.78
+    },
+    {
+      "id": 2,
+      "start": 15.12,
+      "end": 17.0,
+      "text": "そんなはずはない…",
+      "duration": 1.88
+    },
+    {
+      "id": 3,
+      "start": 18.44,
+      "end": 21.18,
+      "text": "俺のおふくろはもっと…",
+      "duration": 2.74
+    },
+    {
+      "id": 4,
+      "start": 21.18,
+      "end": 22.84,
+      "text": "頭に動けない…",
+      "duration": 1.66
+    },
+    {
+      "id": 5,
+      "start": 22.84,
+      "end": 24.0,
+      "text": "どうなってるんだ…",
+      "duration": 1.16
+    },
+    {
+      "id": 6,
+      "start": 25.08,
+      "end": 26.32,
+      "text": "これは…",
+      "duration": 1.24
+    },
+    {
+      "id": 7,
+      "start": 26.32,
+      "end": 28.0,
+      "text": "俺のステータスか…",
+      "duration": 1.68
+    },
+    {
+      "id": 8,
+      "start": 28.643,
+      "end": 30.0,
+      "text": "レベルが1に戻って",
+      "duration": 1.357
+    },
+    {
+      "id": 9,
+      "start": 30.0,
+      "end": 32.82,
+      "text": "名前なし",
+      "duration": 2.82
+    },
+    {
+      "id": 10,
+      "start": 34.139,
+      "end": 35.26,
+      "text": "陛下",
+      "duration": 1.121
+    },
+    {
+      "id": 11,
+      "start": 35.26,
+      "end": 38.5,
+      "text": "よいそのままにしておれ",
+      "duration": 3.24
+    },
+    {
+      "id": 12,
+      "start": 39.618,
+      "end": 40.12,
+      "text": "陛下",
+      "duration": 0.502
+    },
+    {
+      "id": 13,
+      "start": 40.12,
+      "end": 42.54,
+      "text": "いい顔だ",
+      "duration": 2.42
+    },
+    {
+      "id": 14,
+      "start": 43.037,
+      "end": 45.28,
+      "text": "眉間にお前の面影がある",
+      "duration": 2.243
+    },
+    {
+      "id": 15,
+      "start": 45.925,
+      "end": 46.84,
+      "text": "ありがとうございます",
+      "duration": 0.915
+    },
+    {
+      "id": 16,
+      "start": 46.84,
+      "end": 52.08,
+      "text": "私には口元が陛下そっくりに見えます",
+      "duration": 5.24
+    },
+    {
+      "id": 17,
+      "start": 52.625,
+      "end": 55.08,
+      "text": "このじいさん皇帝か何かなのか",
+      "duration": 2.455
+    },
+    {
+      "id": 18,
+      "start": 55.08,
+      "end": 57.18,
+      "text": "一体俺に",
+      "duration": 2.1
+    },
+    {
+      "id": 19,
+      "start": 58.006,
+      "end": 58.5,
+      "text": "何が",
+      "duration": 0.494
+    },
+    {
+      "id": 20,
+      "start": 58.5,
+      "end": 59.98,
+      "text": "起きちゃう",
+      "duration": 1.48
+    },
+    {
+      "id": 21,
+      "start": 60.0,
+      "end": 61.0,
+      "text": "いる",
+      "duration": 1.0
+    }
+  ]
+}

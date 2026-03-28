@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-03-02T23:20:34.960970",
+  "model": "superb/wav2vec2-base-superb-er",
+  "speakers": {
+    "SPEAKER_00": {
+      "seg_13.36": {
+        "emotion": "hap",
+        "confidence": 0.8122,
+        "duration": 3.6400000000000006,
+        "text": "全てを見通す精霊の目を"
+      }
+    },
+    "SPEAKER_01": {
+      "seg_45.34": {
+        "emotion": "ang",
+        "confidence": 0.9776,
+        "duration": 7.5,
+        "text": "家 待機を漂うマナに精霊のステータスや真の名前までが"
+      }
+    },
+    "SPEAKER_02": {
+      "seg_90.00": {
+        "emotion": "ang",
+        "confidence": 0.9816,
+        "duration": 2.0,
+        "text": "第七回イマジチ"
+      },
+      "seg_93.00": {
+        "emotion": "ang",
+        "confidence": 0.9848,
+        "duration": 2.0,
+        "text": "ミョルニル"
+      },
+      "seg_105.00": {
+        "emotion": "ang",
+        "confidence": 0.9917,
+        "duration": 2.0,
+        "text": "とどめを"
+      }
+    },
+    "SPEAKER_03": {
+      "seg_8.02": {
+        "emotion": "ang",
+        "confidence": 0.9994,
+        "duration": 1.7400000000000002,
+        "text": "人間の子よ"
+      },
+      "seg_9.76": {
+        "emotion": "ang",
+        "confidence": 0.9997,
+        "duration": 2.24,
+        "text": "何を望む"
+      },
+      "seg_17.00": {
+        "emotion": "ang",
+        "confidence": 0.9693,
+        "duration": 4.140000000000001,
+        "text": "古き名役に従い"
+      },
+      "seg_21.14": {
+        "emotion": "ang",
+        "confidence": 0.5043,
+        "duration": 4.099999999999998,
+        "text": "我が友が君の先祖から受けた恩に報いるため"
+      },
+      "seg_25.24": {
+        "emotion": "ang",
+        "confidence": 0.969,
+        "duration": 2.9400000000000013,
+        "text": "精霊の力を与えよう"
+      }
+    },
+    "SPEAKER_04": {
+      "seg_63.00": {
+        "emotion": "ang",
+        "confidence": 0.9466,
+        "duration": 1.0,
+        "text": "人間ども"
+      },
+      "seg_65.00": {
+        "emotion": "ang",
+        "confidence": 0.9046,
+        "duration": 2.0,
+        "text": "貴様らは死の大地まで"
+      },
+      "seg_67.00": {
+        "emotion": "hap",
+        "confidence": 0.5703,
+        "duration": 4.0,
+        "text": "最後に残った我らの安息の地まで奪おうとするのか"
+      }
+    },
+    "UNKNOWN": {
+      "seg_0.00": {
+        "emotion": "ang",
+        "confidence": 0.6263,
+        "duration": 8.02,
+        "text": "我は星の精霊"
+      },
+      "seg_12.00": {
+        "emotion": "ang",
+        "confidence": 0.9742,
+        "duration": 1.3599999999999994,
+        "text": "目を"
+      },
+      "seg_30.00": {
+        "emotion": "neu",
+        "confidence": 0.7478,
+        "duration": 2.0,
+        "text": "ん"
+      },
+      "seg_52.84": {
+        "emotion": "ang",
+        "confidence": 0.9984,
+        "duration": 2.0,
+        "text": "ありがとうございました"
+      },
+      "seg_60.00": {
+        "emotion": "sad",
+        "confidence": 0.9358,
+        "duration": 1.0,
+        "text": "くっ"
+      },
+      "seg_72.00": {
+        "emotion": "ang",
+        "confidence": 0.9938,
+        "duration": 1.0,
+        "text": "ブレッド 砲撃を"
+      },
+      "seg_74.00": {
+        "emotion": "hap",
+        "confidence": 0.9979,
+        "duration": 1.0,
+        "text": "おう"
+      }
+    }
+  },
+  "total_segments": 20
+}

@@ -1,0 +1,1563 @@
+{
+  "timestamp": "2026-03-17T22:32:27.404960",
+  "model": "whisperx/large-v3",
+  "language": "ja",
+  "device": "cpu",
+  "compute_type": "int8",
+  "total_segments": 2,
+  "segments": [
+    {
+      "id": 0,
+      "start": 15.742,
+      "end": 45.259,
+      "duration": 29.517,
+      "text": "なはずはない俺のおふくろはもっとまともに動けないどうなってるんだこれは俺のステータスかレベルが1に戻ってる名前なし陛下よいそのままにしておれ陛下いい顔だ眉間にお前の面影がある",
+      "words": [
+        {
+          "word": "な",
+          "start": 15.742,
+          "end": 18.365,
+          "score": 0.944
+        },
+        {
+          "word": "は",
+          "start": 18.365,
+          "end": 18.385,
+          "score": 0.0
+        },
+        {
+          "word": "ず",
+          "start": 18.385,
+          "end": 18.405,
+          "score": 0.0
+        },
+        {
+          "word": "は",
+          "start": 18.405,
+          "end": 18.425,
+          "score": 0.0
+        },
+        {
+          "word": "な",
+          "start": 18.425,
+          "end": 18.445,
+          "score": 0.0
+        },
+        {
+          "word": "い",
+          "start": 18.445,
+          "end": 18.465,
+          "score": 0.0
+        },
+        {
+          "word": "俺",
+          "start": 18.465,
+          "end": 18.766,
+          "score": 0.96
+        },
+        {
+          "word": "の",
+          "start": 18.766,
+          "end": 18.886,
+          "score": 0.925
+        },
+        {
+          "word": "お",
+          "start": 18.886,
+          "end": 19.707,
+          "score": 0.903
+        },
+        {
+          "word": "ふ",
+          "start": 19.707,
+          "end": 19.727,
+          "score": 0.0
+        },
+        {
+          "word": "く",
+          "start": 19.727,
+          "end": 19.747,
+          "score": 0.0
+        },
+        {
+          "word": "ろ",
+          "start": 19.747,
+          "end": 19.767,
+          "score": 0.0
+        },
+        {
+          "word": "は",
+          "start": 19.767,
+          "end": 19.787,
+          "score": 0.588
+        },
+        {
+          "word": "も",
+          "start": 19.787,
+          "end": 20.007,
+          "score": 0.98
+        },
+        {
+          "word": "っ",
+          "start": 20.007,
+          "end": 20.067,
+          "score": 0.535
+        },
+        {
+          "word": "と",
+          "start": 20.067,
+          "end": 21.389,
+          "score": 0.94
+        },
+        {
+          "word": "ま",
+          "start": 21.389,
+          "end": 21.409,
+          "score": 0.24
+        },
+        {
+          "word": "と",
+          "start": 21.409,
+          "end": 21.529,
+          "score": 0.99
+        },
+        {
+          "word": "も",
+          "start": 21.529,
+          "end": 21.669,
+          "score": 0.93
+        },
+        {
+          "word": "に",
+          "start": 21.669,
+          "end": 21.89,
+          "score": 0.823
+        },
+        {
+          "word": "動",
+          "start": 21.89,
+          "end": 22.05,
+          "score": 0.988
+        },
+        {
+          "word": "け",
+          "start": 22.05,
+          "end": 22.17,
+          "score": 0.84
+        },
+        {
+          "word": "な",
+          "start": 22.17,
+          "end": 22.871,
+          "score": 0.956
+        },
+        {
+          "word": "い",
+          "start": 22.871,
+          "end": 22.891,
+          "score": 0.002
+        },
+        {
+          "word": "ど",
+          "start": 22.891,
+          "end": 23.011,
+          "score": 0.985
+        },
+        {
+          "word": "う",
+          "start": 23.011,
+          "end": 23.111,
+          "score": 0.871
+        },
+        {
+          "word": "な",
+          "start": 23.111,
+          "end": 23.271,
+          "score": 0.993
+        },
+        {
+          "word": "っ",
+          "start": 23.271,
+          "end": 23.332,
+          "score": 0.666
+        },
+        {
+          "word": "て",
+          "start": 23.332,
+          "end": 23.432,
+          "score": 0.998
+        },
+        {
+          "word": "る",
+          "start": 23.432,
+          "end": 23.552,
+          "score": 0.921
+        },
+        {
+          "word": "ん",
+          "start": 23.552,
+          "end": 23.652,
+          "score": 0.973
+        },
+        {
+          "word": "だ",
+          "start": 23.652,
+          "end": 25.174,
+          "score": 0.978
+        },
+        {
+          "word": "こ",
+          "start": 25.174,
+          "end": 25.334,
+          "score": 0.993
+        },
+        {
+          "word": "れ",
+          "start": 25.334,
+          "end": 25.474,
+          "score": 0.857
+        },
+        {
+          "word": "は",
+          "start": 25.474,
+          "end": 26.395,
+          "score": 0.958
+        },
+        {
+          "word": "俺",
+          "start": 26.395,
+          "end": 26.696,
+          "score": 0.938
+        },
+        {
+          "word": "の",
+          "start": 26.696,
+          "end": 28.638,
+          "score": 0.921
+        },
+        {
+          "word": "ス",
+          "start": 28.638,
+          "end": 28.658,
+          "score": 0.006
+        },
+        {
+          "word": "テ",
+          "start": 28.658,
+          "end": 28.838,
+          "score": 0.879
+        },
+        {
+          "word": "ー",
+          "start": 28.838,
+          "end": 28.858,
+          "score": 0.0
+        },
+        {
+          "word": "タ",
+          "start": 28.858,
+          "end": 28.878,
+          "score": 0.0
+        },
+        {
+          "word": "ス",
+          "start": 28.878,
+          "end": 28.899,
+          "score": 0.0
+        },
+        {
+          "word": "か",
+          "start": 28.899,
+          "end": 28.919,
+          "score": 0.0
+        },
+        {
+          "word": "レ",
+          "start": 28.919,
+          "end": 28.939,
+          "score": 0.0
+        },
+        {
+          "word": "ベ",
+          "start": 28.939,
+          "end": 28.959,
+          "score": 0.248
+        },
+        {
+          "word": "ル",
+          "start": 28.959,
+          "end": 29.079,
+          "score": 0.997
+        },
+        {
+          "word": "が",
+          "start": 29.079,
+          "end": 29.239,
+          "score": 0.875
+        },
+        {
+          "word": "1",
+          "start": 29.239,
+          "end": 29.519,
+          "score": 0.992
+        },
+        {
+          "word": "に",
+          "start": 29.519,
+          "end": 29.639,
+          "score": 1.0
+        },
+        {
+          "word": "戻",
+          "start": 29.639,
+          "end": 29.9,
+          "score": 1.0
+        },
+        {
+          "word": "っ",
+          "start": 29.9,
+          "end": 29.94,
+          "score": 0.501
+        },
+        {
+          "word": "て",
+          "start": 29.94,
+          "end": 30.06,
+          "score": 0.997
+        },
+        {
+          "word": "る",
+          "start": 30.06,
+          "end": 31.582,
+          "score": 0.948
+        },
+        {
+          "word": "名",
+          "start": 31.582,
+          "end": 31.602,
+          "score": 0.999
+        },
+        {
+          "word": "前",
+          "start": 31.602,
+          "end": 32.623,
+          "score": 0.968
+        },
+        {
+          "word": "な",
+          "start": 32.623,
+          "end": 32.643,
+          "score": 0.335
+        },
+        {
+          "word": "し",
+          "start": 32.643,
+          "end": 34.866,
+          "score": 0.993
+        },
+        {
+          "word": "陛",
+          "start": 34.866,
+          "end": 36.508,
+          "score": 0.966
+        },
+        {
+          "word": "下",
+          "start": 36.508,
+          "end": 36.528,
+          "score": 0.0
+        },
+        {
+          "word": "よ",
+          "start": 36.528,
+          "end": 36.548,
+          "score": 0.0
+        },
+        {
+          "word": "い",
+          "start": 36.548,
+          "end": 36.568,
+          "score": 0.985
+        },
+        {
+          "word": "そ",
+          "start": 36.568,
+          "end": 36.748,
+          "score": 0.999
+        },
+        {
+          "word": "の",
+          "start": 36.748,
+          "end": 37.069,
+          "score": 0.928
+        },
+        {
+          "word": "ま",
+          "start": 37.069,
+          "end": 37.089,
+          "score": 0.0
+        },
+        {
+          "word": "ま",
+          "start": 37.089,
+          "end": 37.109,
+          "score": 1.0
+        },
+        {
+          "word": "に",
+          "start": 37.109,
+          "end": 37.529,
+          "score": 0.86
+        },
+        {
+          "word": "し",
+          "start": 37.529,
+          "end": 37.549,
+          "score": 0.0
+        },
+        {
+          "word": "て",
+          "start": 37.549,
+          "end": 37.569,
+          "score": 0.0
+        },
+        {
+          "word": "お",
+          "start": 37.569,
+          "end": 37.589,
+          "score": 0.866
+        },
+        {
+          "word": "れ",
+          "start": 37.589,
+          "end": 39.612,
+          "score": 0.995
+        },
+        {
+          "word": "陛",
+          "start": 39.612,
+          "end": 39.972,
+          "score": 0.944
+        },
+        {
+          "word": "下",
+          "start": 39.972,
+          "end": 41.154,
+          "score": 0.991
+        },
+        {
+          "word": "い",
+          "start": 41.154,
+          "end": 41.434,
+          "score": 0.955
+        },
+        {
+          "word": "い",
+          "start": 41.434,
+          "end": 41.695,
+          "score": 0.954
+        },
+        {
+          "word": "顔",
+          "start": 41.695,
+          "end": 43.236,
+          "score": 0.971
+        },
+        {
+          "word": "だ",
+          "start": 43.236,
+          "end": 43.257,
+          "score": 0.0
+        },
+        {
+          "word": "眉",
+          "start": 43.257,
+          "end": 43.277,
+          "score": 0.989
+        },
+        {
+          "word": "間",
+          "start": 43.277,
+          "end": 43.537,
+          "score": 1.0
+        },
+        {
+          "word": "に",
+          "start": 43.537,
+          "end": 43.697,
+          "score": 0.992
+        },
+        {
+          "word": "お",
+          "start": 43.697,
+          "end": 43.837,
+          "score": 1.0
+        },
+        {
+          "word": "前",
+          "start": 43.837,
+          "end": 44.098,
+          "score": 1.0
+        },
+        {
+          "word": "の",
+          "start": 44.098,
+          "end": 44.338,
+          "score": 0.917
+        },
+        {
+          "word": "面",
+          "start": 44.338,
+          "end": 44.758,
+          "score": 0.917
+        },
+        {
+          "word": "影",
+          "start": 44.758,
+          "end": 44.778,
+          "score": 0.006
+        },
+        {
+          "word": "が",
+          "start": 44.778,
+          "end": 44.919,
+          "score": 0.961
+        },
+        {
+          "word": "あ",
+          "start": 44.919,
+          "end": 45.099,
+          "score": 0.77
+        },
+        {
+          "word": "る",
+          "start": 45.099,
+          "end": 45.259,
+          "score": 0.746
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 2.623,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ず"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.301,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.821,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ふ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "く"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ろ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.22,
+          "text_chunk": "も"
+        },
+        {
+          "type": "speech",
+          "duration": 0.06,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 1.322,
+          "text_chunk": "と"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "と"
+        },
+        {
+          "type": "speech",
+          "duration": 0.14,
+          "text_chunk": "も"
+        },
+        {
+          "type": "speech",
+          "duration": 0.221,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "動"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "け"
+        },
+        {
+          "type": "speech",
+          "duration": 0.701,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "ど"
+        },
+        {
+          "type": "speech",
+          "duration": 0.1,
+          "text_chunk": "う"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.1,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "る"
+        },
+        {
+          "type": "speech",
+          "duration": 0.1,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 1.522,
+          "text_chunk": "だ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.14,
+          "text_chunk": "れ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.921,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.301,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 1.942,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ス"
+        },
+        {
+          "type": "speech",
+          "duration": 0.18,
+          "text_chunk": "テ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ー"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "タ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ス"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "レ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ベ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "ル"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.28,
+          "text_chunk": "1"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.261,
+          "text_chunk": "戻"
+        },
+        {
+          "type": "speech",
+          "duration": 0.04,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 1.522,
+          "text_chunk": "る"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "名"
+        },
+        {
+          "type": "speech",
+          "duration": 1.021,
+          "text_chunk": "前"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 2.223,
+          "text_chunk": "し"
+        },
+        {
+          "type": "speech",
+          "duration": 1.642,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "下"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "よ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.18,
+          "text_chunk": "そ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.321,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.42,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "し"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 2.023,
+          "text_chunk": "れ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.36,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 1.182,
+          "text_chunk": "下"
+        },
+        {
+          "type": "speech",
+          "duration": 0.28,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.261,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 1.541,
+          "text_chunk": "顔"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "だ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "眉"
+        },
+        {
+          "type": "speech",
+          "duration": 0.26,
+          "text_chunk": "間"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.14,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 0.261,
+          "text_chunk": "前"
+        },
+        {
+          "type": "speech",
+          "duration": 0.24,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.42,
+          "text_chunk": "面"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "影"
+        },
+        {
+          "type": "speech",
+          "duration": 0.141,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.18,
+          "text_chunk": "あ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.16,
+          "text_chunk": "る"
+        }
+      ],
+      "cropped_audio": "work\\cropped_segments\\segment_000.wav"
+    },
+    {
+      "id": 1,
+      "start": 46.167,
+      "end": 61.071,
+      "duration": 14.904,
+      "text": "ありがとうございます私には口元が陛下そっくりに見えますこのじいさん皇帝か何かなのか一体俺に何が起きている",
+      "words": [
+        {
+          "word": "あ",
+          "start": 46.167,
+          "end": 46.589,
+          "score": 0.86
+        },
+        {
+          "word": "り",
+          "start": 46.589,
+          "end": 46.609,
+          "score": 0.0
+        },
+        {
+          "word": "が",
+          "start": 46.609,
+          "end": 46.629,
+          "score": 0.0
+        },
+        {
+          "word": "と",
+          "start": 46.629,
+          "end": 46.649,
+          "score": 0.0
+        },
+        {
+          "word": "う",
+          "start": 46.649,
+          "end": 46.669,
+          "score": 0.853
+        },
+        {
+          "word": "ご",
+          "start": 46.669,
+          "end": 46.83,
+          "score": 0.887
+        },
+        {
+          "word": "ざ",
+          "start": 46.83,
+          "end": 46.95,
+          "score": 0.954
+        },
+        {
+          "word": "い",
+          "start": 46.95,
+          "end": 47.071,
+          "score": 0.833
+        },
+        {
+          "word": "ま",
+          "start": 47.071,
+          "end": 47.191,
+          "score": 0.999
+        },
+        {
+          "word": "す",
+          "start": 47.191,
+          "end": 48.296,
+          "score": 0.992
+        },
+        {
+          "word": "私",
+          "start": 48.296,
+          "end": 48.698,
+          "score": 0.933
+        },
+        {
+          "word": "に",
+          "start": 48.698,
+          "end": 48.818,
+          "score": 0.992
+        },
+        {
+          "word": "は",
+          "start": 48.818,
+          "end": 49.542,
+          "score": 1.0
+        },
+        {
+          "word": "口",
+          "start": 49.542,
+          "end": 49.762,
+          "score": 0.99
+        },
+        {
+          "word": "元",
+          "start": 49.762,
+          "end": 50.044,
+          "score": 1.0
+        },
+        {
+          "word": "が",
+          "start": 50.044,
+          "end": 50.606,
+          "score": 0.998
+        },
+        {
+          "word": "陛",
+          "start": 50.606,
+          "end": 50.807,
+          "score": 0.907
+        },
+        {
+          "word": "下",
+          "start": 50.807,
+          "end": 50.968,
+          "score": 0.876
+        },
+        {
+          "word": "そ",
+          "start": 50.968,
+          "end": 51.209,
+          "score": 0.99
+        },
+        {
+          "word": "っ",
+          "start": 51.209,
+          "end": 51.249,
+          "score": 0.732
+        },
+        {
+          "word": "く",
+          "start": 51.249,
+          "end": 51.369,
+          "score": 0.995
+        },
+        {
+          "word": "り",
+          "start": 51.369,
+          "end": 51.49,
+          "score": 0.963
+        },
+        {
+          "word": "に",
+          "start": 51.49,
+          "end": 51.61,
+          "score": 0.853
+        },
+        {
+          "word": "見",
+          "start": 51.61,
+          "end": 51.731,
+          "score": 0.992
+        },
+        {
+          "word": "え",
+          "start": 51.731,
+          "end": 51.851,
+          "score": 0.995
+        },
+        {
+          "word": "ま",
+          "start": 51.851,
+          "end": 51.992,
+          "score": 0.996
+        },
+        {
+          "word": "す",
+          "start": 51.992,
+          "end": 52.836,
+          "score": 0.953
+        },
+        {
+          "word": "こ",
+          "start": 52.836,
+          "end": 52.856,
+          "score": 0.998
+        },
+        {
+          "word": "の",
+          "start": 52.856,
+          "end": 53.037,
+          "score": 0.889
+        },
+        {
+          "word": "じ",
+          "start": 53.037,
+          "end": 53.237,
+          "score": 0.891
+        },
+        {
+          "word": "い",
+          "start": 53.237,
+          "end": 53.257,
+          "score": 0.918
+        },
+        {
+          "word": "さ",
+          "start": 53.257,
+          "end": 53.358,
+          "score": 0.951
+        },
+        {
+          "word": "ん",
+          "start": 53.358,
+          "end": 53.599,
+          "score": 0.841
+        },
+        {
+          "word": "皇",
+          "start": 53.599,
+          "end": 53.84,
+          "score": 0.917
+        },
+        {
+          "word": "帝",
+          "start": 53.84,
+          "end": 54.161,
+          "score": 0.876
+        },
+        {
+          "word": "か",
+          "start": 54.161,
+          "end": 54.181,
+          "score": 0.0
+        },
+        {
+          "word": "何",
+          "start": 54.181,
+          "end": 54.503,
+          "score": 0.824
+        },
+        {
+          "word": "か",
+          "start": 54.503,
+          "end": 54.523,
+          "score": 0.0
+        },
+        {
+          "word": "な",
+          "start": 54.523,
+          "end": 54.543,
+          "score": 1.0
+        },
+        {
+          "word": "の",
+          "start": 54.543,
+          "end": 56.913,
+          "score": 0.946
+        },
+        {
+          "word": "か",
+          "start": 56.913,
+          "end": 56.933,
+          "score": 0.0
+        },
+        {
+          "word": "一",
+          "start": 56.933,
+          "end": 56.953,
+          "score": 0.0
+        },
+        {
+          "word": "体",
+          "start": 56.953,
+          "end": 56.973,
+          "score": 0.0
+        },
+        {
+          "word": "俺",
+          "start": 56.973,
+          "end": 56.994,
+          "score": 0.59
+        },
+        {
+          "word": "に",
+          "start": 56.994,
+          "end": 58.118,
+          "score": 0.982
+        },
+        {
+          "word": "何",
+          "start": 58.118,
+          "end": 59.806,
+          "score": 0.953
+        },
+        {
+          "word": "が",
+          "start": 59.806,
+          "end": 59.826,
+          "score": 0.0
+        },
+        {
+          "word": "起",
+          "start": 59.826,
+          "end": 59.846,
+          "score": 0.962
+        },
+        {
+          "word": "き",
+          "start": 59.846,
+          "end": 61.011,
+          "score": 0.939
+        },
+        {
+          "word": "て",
+          "start": 61.011,
+          "end": 61.031,
+          "score": 0.0
+        },
+        {
+          "word": "い",
+          "start": 61.031,
+          "end": 61.051,
+          "score": 0.0
+        },
+        {
+          "word": "る",
+          "start": 61.051,
+          "end": 61.071,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.422,
+          "text_chunk": "あ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "り"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "と"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "う"
+        },
+        {
+          "type": "speech",
+          "duration": 0.161,
+          "text_chunk": "ご"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "ざ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 1.105,
+          "text_chunk": "す"
+        },
+        {
+          "type": "speech",
+          "duration": 0.402,
+          "text_chunk": "私"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.724,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.22,
+          "text_chunk": "口"
+        },
+        {
+          "type": "speech",
+          "duration": 0.282,
+          "text_chunk": "元"
+        },
+        {
+          "type": "speech",
+          "duration": 0.562,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.201,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 0.161,
+          "text_chunk": "下"
+        },
+        {
+          "type": "speech",
+          "duration": 0.241,
+          "text_chunk": "そ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.04,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "く"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "り"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "見"
+        },
+        {
+          "type": "speech",
+          "duration": 0.12,
+          "text_chunk": "え"
+        },
+        {
+          "type": "speech",
+          "duration": 0.141,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.844,
+          "text_chunk": "す"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.181,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.2,
+          "text_chunk": "じ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.101,
+          "text_chunk": "さ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.241,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 0.241,
+          "text_chunk": "皇"
+        },
+        {
+          "type": "speech",
+          "duration": 0.321,
+          "text_chunk": "帝"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.322,
+          "text_chunk": "何"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 2.37,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "一"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "体"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 1.124,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 1.688,
+          "text_chunk": "何"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "起"
+        },
+        {
+          "type": "speech",
+          "duration": 1.165,
+          "text_chunk": "き"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "る"
+        }
+      ],
+      "cropped_audio": "work\\cropped_segments\\segment_001.wav"
+    }
+  ]
+}

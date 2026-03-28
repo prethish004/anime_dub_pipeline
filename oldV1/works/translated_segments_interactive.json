@@ -1,0 +1,1172 @@
+{
+  "timestamp": "2026-03-17T17:06:44.899381",
+  "total_segments": 22,
+  "segments": [
+    {
+      "segment_id": 0,
+      "speaker": "SPEAKER_02",
+      "original_text": "ここは…",
+      "translated_text": "This place is…",
+      "emotion_used": "hap",
+      "total_duration": 1.451,
+      "total_syllables": 6,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.39,
+          "text_chunk": "Thisplaceis…",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 1,
+      "speaker": "SPEAKER_02",
+      "original_text": "母さん…",
+      "translated_text": "Mom...",
+      "emotion_used": "hap",
+      "total_duration": 2.8,
+      "total_syllables": 4,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.725,
+          "text_chunk": "Mom...",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 1.035,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 2,
+      "speaker": "SPEAKER_02",
+      "original_text": "そんなはずはない…",
+      "translated_text": "That can't be true...",
+      "emotion_used": "hap",
+      "total_duration": 1.9,
+      "total_syllables": 10,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.695,
+          "text_chunk": "Thatcan't",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "be",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.552,
+          "text_chunk": "true...",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.164,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.388,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 3,
+      "speaker": "UNKNOWN",
+      "original_text": "俺のおふくろはもっと…",
+      "translated_text": "My mom is more...",
+      "emotion_used": "hap",
+      "total_duration": 2.76,
+      "total_syllables": 12,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.386,
+          "text_chunk": "My",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "mom",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.466,
+          "text_chunk": "is",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "more",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "...",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.366,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.243,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.974,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 4,
+      "speaker": "SPEAKER_02",
+      "original_text": "頭に動けない…",
+      "translated_text": "I can't move...",
+      "emotion_used": "hap",
+      "total_duration": 1.68,
+      "total_syllables": 9,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.697,
+          "text_chunk": "Ican't",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "move",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.164,
+          "text_chunk": "...",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.123,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.123,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.492,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 5,
+      "speaker": "SPEAKER_02",
+      "original_text": "どうなってるんだ…",
+      "translated_text": "What's happening?",
+      "emotion_used": "hap",
+      "total_duration": 1.181,
+      "total_syllables": 11,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.269,
+          "text_chunk": "What's",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "happening",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.166,
+          "text_chunk": "?",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.104,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.124,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.104,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.29,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.062,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 6,
+      "speaker": "SPEAKER_02",
+      "original_text": "これは…",
+      "translated_text": "This is…",
+      "emotion_used": "hap",
+      "total_duration": 1.261,
+      "total_syllables": 5,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.199,
+          "text_chunk": "Thisis…",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 7,
+      "speaker": "SPEAKER_02",
+      "original_text": "俺のステータスか…",
+      "translated_text": "My status, huh…",
+      "emotion_used": "ang",
+      "total_duration": 1.7,
+      "total_syllables": 10,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.533,
+          "text_chunk": "Mystatus",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": ",",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.553,
+          "text_chunk": "huh…",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.451,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 8,
+      "speaker": "SPEAKER_02",
+      "original_text": "レベルが1に戻って",
+      "translated_text": "Back to level one.",
+      "emotion_used": "ang",
+      "total_duration": 1.378,
+      "total_syllables": 13,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.802,
+          "text_chunk": "Backtolevel",
+          "syllables": 4
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "one",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": ".",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.103,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.288,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.062,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 9,
+      "speaker": "SPEAKER_02",
+      "original_text": "名前なし",
+      "translated_text": "No name.",
+      "emotion_used": "ang",
+      "total_duration": 2.84,
+      "total_syllables": 6,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 2.779,
+          "text_chunk": "Noname.",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 10,
+      "speaker": "UNKNOWN",
+      "original_text": "陛下",
+      "translated_text": "Your Majesty",
+      "emotion_used": "hap",
+      "total_duration": 1.142,
+      "total_syllables": 4,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.121,
+          "text_chunk": "YourMajesty",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 11,
+      "speaker": "SPEAKER_00",
+      "original_text": "よいそのままにしておれ",
+      "translated_text": "Leave it as it is.",
+      "emotion_used": "hap",
+      "total_duration": 3.26,
+      "total_syllables": 13,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.276,
+          "text_chunk": "Leaveitas",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "it",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.182,
+          "text_chunk": "is",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.324,
+          "text_chunk": ".",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 1.214,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 12,
+      "speaker": "SPEAKER_01",
+      "original_text": "陛下",
+      "translated_text": "Your Majesty",
+      "emotion_used": "neu",
+      "total_duration": 0.524,
+      "total_syllables": 4,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.502,
+          "text_chunk": "YourMajesty",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.022,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 13,
+      "speaker": "SPEAKER_00",
+      "original_text": "いい顔だ",
+      "translated_text": "Good face.",
+      "emotion_used": "neu",
+      "total_duration": 2.44,
+      "total_syllables": 6,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.525,
+          "text_chunk": "Goodface",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": ".",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.345,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.549,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 14,
+      "speaker": "SPEAKER_00",
+      "original_text": "眉間にお前の面影がある",
+      "translated_text": "Your face haunts my mind.",
+      "emotion_used": "neu",
+      "total_duration": 2.263,
+      "total_syllables": 13,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.428,
+          "text_chunk": "Yourface",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "haunts",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.163,
+          "text_chunk": "my",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.163,
+          "text_chunk": "mind",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.265,
+          "text_chunk": ".",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.245,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.448,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.143,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.224,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 15,
+      "speaker": "SPEAKER_01",
+      "original_text": "ありがとうございます",
+      "translated_text": "Thank you!",
+      "emotion_used": "hap",
+      "total_duration": 0.936,
+      "total_syllables": 10,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.229,
+          "text_chunk": "Thank",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "you",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.145,
+          "text_chunk": "!",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.416,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 16,
+      "speaker": "UNKNOWN",
+      "original_text": "私には口元が陛下そっくりに見えます",
+      "translated_text": "Your mouth looks just like His Majesty's.",
+      "emotion_used": "hap",
+      "total_duration": 5.26,
+      "total_syllables": 23,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.975,
+          "text_chunk": "Yourmouthlooksjust",
+          "syllables": 4
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "like",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.706,
+          "text_chunk": "HisMajesty's",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.241,
+          "text_chunk": ".",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.262,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.585,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.343,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.221,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.141,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.1,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.162,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.08,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 17,
+      "speaker": "SPEAKER_01",
+      "original_text": "このじいさん皇帝か何かなのか",
+      "translated_text": "Is this old man an emperor?",
+      "emotion_used": "hap",
+      "total_duration": 2.475,
+      "total_syllables": 17,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.568,
+          "text_chunk": "Isthis",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "old",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "man",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "an",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.081,
+          "text_chunk": "emperor",
+          "syllables": 3
+        },
+        {
+          "type": "speech",
+          "duration": 0.467,
+          "text_chunk": "?",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.325,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.243,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.122,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.081,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.122,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.365,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 18,
+      "speaker": "UNKNOWN",
+      "original_text": "一体俺に",
+      "translated_text": "What do I even have?",
+      "emotion_used": "hap",
+      "total_duration": 2.12,
+      "total_syllables": 8,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 2.059,
+          "text_chunk": "WhatdoIevenhave?",
+          "syllables": 5
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 19,
+      "speaker": "SPEAKER_01",
+      "original_text": "何が",
+      "translated_text": "What?",
+      "emotion_used": "neu",
+      "total_duration": 0.515,
+      "total_syllables": 2,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.494,
+          "text_chunk": "What?",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 20,
+      "speaker": "UNKNOWN",
+      "original_text": "起きちゃう",
+      "translated_text": "I'm awake.",
+      "emotion_used": "neu",
+      "total_duration": 1.501,
+      "total_syllables": 8,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.418,
+          "text_chunk": "I'mawake.",
+          "syllables": 4
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    },
+    {
+      "segment_id": 21,
+      "speaker": "UNKNOWN",
+      "original_text": "いる",
+      "translated_text": "Here",
+      "emotion_used": "hap",
+      "total_duration": 1.021,
+      "total_syllables": 3,
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.0,
+          "text_chunk": "Here",
+          "syllables": 2
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "",
+          "syllables": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2239 @@
+{
+  "timestamp": "2026-03-06T21:47:34.636179",
+  "tts_model": "xtts_v2",
+  "speakers": {},
+  "emotions_used": [
+    "neutral",
+    "hap",
+    "sad",
+    "ang",
+    "neu"
+  ],
+  "total_clips": 20,
+  "clips": [
+    {
+      "segment_id": 1,
+      "original_text": "\u6211\u306f\u661f\u306e\u7cbe\u970a",
+      "speaker": "SPEAKER_03",
+      "start": 6.532,
+      "end": 8.02,
+      "duration": 1.488,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I am a star spirit.",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.15,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I'm a spirit of stars.",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.15,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I'm a stars spirit.",
+          "syllables": 5,
+          "estimated_duration": 1.4285714285714286,
+          "duration_ratio": 0.9600614439324117,
+          "emotion_tag": "HAP"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "I'm a stars spirit.",
+      "syllables": 5,
+      "estimated_duration": 1.4285714285714286,
+      "duration_ratio": 0.9600614439324117,
+      "emotion": "hap",
+      "emotion_confidence": 0.8122,
+      "emotion_tag": "HAP",
+      "text_with_emotion": "HAP I'm a stars spirit.",
+      "audio_file": "work/voice_clips\\segment_001_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "hap",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_001_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 2,
+      "original_text": "\u4eba\u9593\u306e\u5b50\u3088",
+      "speaker": "SPEAKER_03",
+      "start": 8.02,
+      "end": 9.76,
+      "duration": 1.74,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Oh, child of man,",
+          "syllables": 4,
+          "estimated_duration": 1.14,
+          "duration_ratio": 0.66,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "listen, Child of human.",
+          "syllables": 6,
+          "estimated_duration": 1.7142857142857142,
+          "duration_ratio": 0.9852216748768472,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Hey, you child of man.",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.82,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "listen, Child of human.",
+      "syllables": 6,
+      "estimated_duration": 1.7142857142857142,
+      "duration_ratio": 0.9852216748768472,
+      "emotion": "ang",
+      "emotion_confidence": 0.9776,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG listen, Child of human.",
+      "audio_file": "work/voice_clips\\segment_002_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_002_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 3,
+      "original_text": "\u4f55\u3092\u671b\u3080",
+      "speaker": "SPEAKER_03",
+      "start": 10.441,
+      "end": 12.0,
+      "duration": 1.559,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "what is you desire?",
+          "syllables": 6,
+          "estimated_duration": 1.7142857142857142,
+          "duration_ratio": 1.099605974525795,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "What is it you want?",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.92,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "What is it you want?",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.92,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "what is you desire?",
+      "syllables": 6,
+      "estimated_duration": 1.7142857142857142,
+      "duration_ratio": 1.099605974525795,
+      "emotion": "ang",
+      "emotion_confidence": 0.9816,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG what is you desire?",
+      "audio_file": "work/voice_clips\\segment_003_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_003_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 4,
+      "original_text": "\u76ee\u3092",
+      "speaker": "SPEAKER_00",
+      "start": 12.919,
+      "end": 13.36,
+      "duration": 0.441,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "the sight",
+          "syllables": 2,
+          "estimated_duration": 0.5714285714285714,
+          "duration_ratio": 1.295756397797214,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Watch it!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 1.3,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Eyes up!",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 1.94,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "the sight",
+      "syllables": 2,
+      "estimated_duration": 0.5714285714285714,
+      "duration_ratio": 1.295756397797214,
+      "emotion": "ang",
+      "emotion_confidence": 0.9848,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG the sight",
+      "audio_file": "work/voice_clips\\segment_004_SPEAKER_00.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_004_SPEAKER_00.wav"
+    },
+    {
+      "segment_id": 5,
+      "original_text": "\u5168\u3066\u3092\u898b\u901a\u3059\u7cbe\u970a\u306e\u76ee\u3092",
+      "speaker": "SPEAKER_00",
+      "start": 14.799,
+      "end": 17.0,
+      "duration": 2.201,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "The spirit's all-seeing eye.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 0.91,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "The spirit sees everything.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 0.91,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "The spirit's eye sees it all.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.04,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "The spirit's eye sees it all.",
+      "syllables": 8,
+      "estimated_duration": 2.29,
+      "duration_ratio": 1.04,
+      "emotion": "ang",
+      "emotion_confidence": 0.9917,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG The spirit's eye sees it all.",
+      "audio_file": "work/voice_clips\\segment_005_SPEAKER_00.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_005_SPEAKER_00.wav"
+    },
+    {
+      "segment_id": 6,
+      "original_text": "\u53e4\u304d\u540d\u5f79\u306b\u5f93\u3044",
+      "speaker": "SPEAKER_03",
+      "start": 19.075,
+      "end": 21.14,
+      "duration": 2.065,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I follow the old traditions.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.11,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I\u2019ll stick to the covenant of old.",
+          "syllables": 9,
+          "estimated_duration": 2.5714285714285716,
+          "duration_ratio": 1.245243860255967,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I\u2019ll honor the old traditions.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.11,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "I\u2019ll stick to the covenant of old.",
+      "syllables": 9,
+      "estimated_duration": 2.5714285714285716,
+      "duration_ratio": 1.245243860255967,
+      "emotion": "ang",
+      "emotion_confidence": 0.9994,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I\u2019ll stick to the covenant of old.",
+      "audio_file": "work/voice_clips\\segment_006_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_006_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 7,
+      "original_text": "\u6211\u304c\u53cb\u304c\u541b\u306e\u5148\u7956\u304b\u3089\u53d7\u3051\u305f\u6069\u306b\u5831\u3044\u308b\u305f\u3081",
+      "speaker": "SPEAKER_03",
+      "start": 21.14,
+      "end": 25.24,
+      "duration": 4.1,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "To repay the kindness given by your ancestors to us,",
+          "syllables": 14,
+          "estimated_duration": 4.0,
+          "duration_ratio": 0.9756097560975611,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "To honor my friend\u2019s debt to your ancestors,",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.7,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "To repay my friend\u2019s debt to your ancestors,",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.7,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "To repay the kindness given by your ancestors to us,",
+      "syllables": 14,
+      "estimated_duration": 4.0,
+      "duration_ratio": 0.9756097560975611,
+      "emotion": "ang",
+      "emotion_confidence": 0.9997,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG To repay the kindness given by your ancestors to us,",
+      "audio_file": "work/voice_clips\\segment_007_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_007_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 8,
+      "original_text": "\u7cbe\u970a\u306e\u529b\u3092\u4e0e\u3048\u3088\u3046",
+      "speaker": "SPEAKER_03",
+      "start": 25.24,
+      "end": 28.18,
+      "duration": 2.94,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I'll lend you the power of the spirits.",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.97,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Let's channel the spirits' power for you.",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.97,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I shall grant you the power of spirits.",
+          "syllables": 10,
+          "estimated_duration": 2.857142857142857,
+          "duration_ratio": 0.9718172983479106,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "I shall grant you the power of spirits.",
+      "syllables": 10,
+      "estimated_duration": 2.857142857142857,
+      "duration_ratio": 0.9718172983479106,
+      "emotion": "ang",
+      "emotion_confidence": 0.9693,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I shall grant you the power of spirits.",
+      "audio_file": "work/voice_clips\\segment_008_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_008_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 9,
+      "original_text": "\u3093",
+      "speaker": "UNKNOWN",
+      "start": 30.0,
+      "end": 32.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Come on, just say it already.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "i can see it now,",
+          "syllables": 5,
+          "estimated_duration": 1.4285714285714286,
+          "duration_ratio": 0.7142857142857143,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Just say it, come on already.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "i can see it now,",
+      "syllables": 5,
+      "estimated_duration": 1.4285714285714286,
+      "duration_ratio": 0.7142857142857143,
+      "emotion": "ang",
+      "emotion_confidence": 0.5043,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG i can see it now,",
+      "audio_file": "work/voice_clips\\segment_009_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "neutral",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_009_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 10,
+      "original_text": "\u5bb6 \u5f85\u6a5f\u3092\u6f02\u3046\u30de\u30ca\u306b\u7cbe\u970a\u306e\u30b9\u30c6\u30fc\u30bf\u30b9\u3084\u771f\u306e\u540d\u524d\u307e\u3067\u304c",
+      "speaker": "SPEAKER_01",
+      "start": 45.54,
+      "end": 52.84,
+      "duration": 7.3,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "In the air, I can feel the mana waiting, even the spirits' true names.",
+          "syllables": 19,
+          "estimated_duration": 5.43,
+          "duration_ratio": 0.74,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I can sense the mana lingering here, even the spirits' true names and stats around me.",
+          "syllables": 25,
+          "estimated_duration": 7.142857142857143,
+          "duration_ratio": 0.9784735812133073,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I can feel mana drifting here, even the spirits\u2019 true names and their stats.",
+          "syllables": 20,
+          "estimated_duration": 5.71,
+          "duration_ratio": 0.78,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "I can sense the mana lingering here, even the spirits' true names and stats around me.",
+      "syllables": 25,
+      "estimated_duration": 7.142857142857143,
+      "duration_ratio": 0.9784735812133073,
+      "emotion": "ang",
+      "emotion_confidence": 0.969,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I can sense the mana lingering here, even the spirits' true names and stats around me.",
+      "audio_file": "work/voice_clips\\segment_010_SPEAKER_01.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_010_SPEAKER_01.wav"
+    },
+    {
+      "segment_id": 11,
+      "original_text": "\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f",
+      "speaker": "UNKNOWN",
+      "start": 53.945,
+      "end": 54.84,
+      "duration": 0.895,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "huuu..",
+          "syllables": 1,
+          "estimated_duration": 0.2857142857142857,
+          "duration_ratio": 0.31923383878691136,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Thanks a lot!",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 0.96,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Thanks a bunch.",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 0.96,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Thanks a bunch.",
+      "syllables": 3,
+      "estimated_duration": 0.86,
+      "duration_ratio": 0.96,
+      "emotion": "ang",
+      "emotion_confidence": 0.9466,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Thanks a bunch.",
+      "audio_file": "work/voice_clips\\segment_011_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_011_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 12,
+      "original_text": "\u304f\u3063",
+      "speaker": "UNKNOWN",
+      "start": 60.0,
+      "end": 61.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "ughh!",
+          "syllables": 1,
+          "estimated_duration": 0.2857142857142857,
+          "duration_ratio": 0.2857142857142857,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Ugh!",
+          "syllables": 1,
+          "estimated_duration": 0.29,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Ugh!",
+          "syllables": 1,
+          "estimated_duration": 0.29,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "ughh!",
+      "syllables": 1,
+      "estimated_duration": 0.2857142857142857,
+      "duration_ratio": 0.2857142857142857,
+      "emotion": "ang",
+      "emotion_confidence": 0.9046,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG ughh!",
+      "audio_file": "work/voice_clips\\segment_012_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_012_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 13,
+      "original_text": "\u4eba\u9593\u3069\u3082",
+      "speaker": "SPEAKER_04",
+      "start": 63.244,
+      "end": 64.0,
+      "duration": 0.756,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "you humans..",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 1.1337868480725624,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You humans",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 1.13,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "You all",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.76,
+          "emotion_tag": "HAP"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "you humans..",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 1.1337868480725624,
+      "emotion": "hap",
+      "emotion_confidence": 0.5703,
+      "emotion_tag": "HAP",
+      "text_with_emotion": "HAP you humans..",
+      "audio_file": "work/voice_clips\\segment_013_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "neutral",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_013_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 14,
+      "original_text": "\u8cb4\u69d8\u3089\u306f\u6b7b\u306e\u5927\u5730\u307e\u3067",
+      "speaker": "SPEAKER_04",
+      "start": 65.0,
+      "end": 67.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "You won't escape this fate.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You\u2019re headed for the grave now.",
+          "syllables": 9,
+          "estimated_duration": 2.57,
+          "duration_ratio": 1.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "You\u2019ll meet your end right here.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 1.0,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "You\u2019ll meet your end right here.",
+      "syllables": 7,
+      "estimated_duration": 2.0,
+      "duration_ratio": 1.0,
+      "emotion": "ang",
+      "emotion_confidence": 0.6263,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG You\u2019ll meet your end right here.",
+      "audio_file": "work/voice_clips\\segment_014_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_014_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 15,
+      "original_text": "\u6700\u5f8c\u306b\u6b8b\u3063\u305f\u6211\u3089\u306e\u5b89\u606f\u306e\u5730\u307e\u3067\u596a\u304a\u3046\u3068\u3059\u308b\u306e\u304b",
+      "speaker": "SPEAKER_04",
+      "start": 67.0,
+      "end": 71.0,
+      "duration": 4.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Are you trying to take what\u2019s left of our sanctuary?",
+          "syllables": 13,
+          "estimated_duration": 3.71,
+          "duration_ratio": 0.93,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You really want to steal our last safe haven?",
+          "syllables": 11,
+          "estimated_duration": 3.14,
+          "duration_ratio": 0.79,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "So, you plan to take away our last refuge?",
+          "syllables": 13,
+          "estimated_duration": 3.71,
+          "duration_ratio": 0.93,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "Are you trying to take what\u2019s left of our sanctuary?",
+      "syllables": 13,
+      "estimated_duration": 3.71,
+      "duration_ratio": 0.93,
+      "emotion": "ang",
+      "emotion_confidence": 0.9742,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Are you trying to take what\u2019s left of our sanctuary?",
+      "audio_file": "work/voice_clips\\segment_015_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_015_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 16,
+      "original_text": "\u30d6\u30ec\u30c3\u30c9 \u7832\u6483\u3092",
+      "speaker": "UNKNOWN",
+      "start": 72.0,
+      "end": 73.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Bread, fire the cannon!",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.71,
+          "emotion_tag": "NEU"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "bread, cannon!",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 0.8571428571428571,
+          "emotion_tag": "NEU"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Bread, launch the shot!",
+          "syllables": 4,
+          "estimated_duration": 1.14,
+          "duration_ratio": 1.14,
+          "emotion_tag": "NEU"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "bread, cannon!",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 0.8571428571428571,
+      "emotion": "neu",
+      "emotion_confidence": 0.7478,
+      "emotion_tag": "NEU",
+      "text_with_emotion": "NEU bread, cannon!",
+      "audio_file": "work/voice_clips\\segment_016_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "neu",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_016_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 17,
+      "original_text": "\u304a\u3046",
+      "speaker": "UNKNOWN",
+      "start": 74.0,
+      "end": 75.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "on it too.",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 0.8571428571428571,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Oh, hey!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.57,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Oh, hey!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.57,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "on it too.",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 0.8571428571428571,
+      "emotion": "ang",
+      "emotion_confidence": 0.9984,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG on it too.",
+      "audio_file": "work/voice_clips\\segment_017_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\petergriffin.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_017_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 18,
+      "original_text": "\u7b2c\u4e03\u56de\u30a4\u30de\u30b8\u30c1",
+      "speaker": "SPEAKER_02",
+      "start": 90.297,
+      "end": 92.0,
+      "duration": 1.703,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "It\u2019s the seventh Imagichi.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.34,
+          "emotion_tag": "SAD"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "It's the seventh Imagichi.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.34,
+          "emotion_tag": "SAD"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Thats about level 7 magic.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 1.1743981209630063,
+          "emotion_tag": "SAD"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Thats about level 7 magic.",
+      "syllables": 7,
+      "estimated_duration": 2.0,
+      "duration_ratio": 1.1743981209630063,
+      "emotion": "sad",
+      "emotion_confidence": 0.9358,
+      "emotion_tag": "SAD",
+      "text_with_emotion": "SAD Thats about level 7 magic.",
+      "audio_file": "work/voice_clips\\segment_018_SPEAKER_02.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "sad",
+      "prosody": {
+        "speed": 0.85,
+        "pitch_shift": 0.9,
+        "temp": 0.3,
+        "desc": "sadly"
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_018_SPEAKER_02.wav"
+    },
+    {
+      "segment_id": 19,
+      "original_text": "\u30df\u30e7\u30eb\u30cb\u30eb",
+      "speaker": "SPEAKER_02",
+      "start": 93.0,
+      "end": 95.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Mjolnir!",
+      "syllables": 2,
+      "estimated_duration": 0.57,
+      "duration_ratio": 0.29,
+      "emotion": "ang",
+      "emotion_confidence": 0.9938,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Mjolnir!",
+      "audio_file": "work/voice_clips\\segment_019_SPEAKER_02.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_019_SPEAKER_02.wav"
+    },
+    {
+      "segment_id": 20,
+      "original_text": "\u3068\u3069\u3081\u3092",
+      "speaker": "SPEAKER_02",
+      "start": 105.0,
+      "end": 107.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "This is the end for you!",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 0.86,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "finish this u.",
+          "syllables": 4,
+          "estimated_duration": 1.1428571428571428,
+          "duration_ratio": 0.5714285714285714,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I\u2019m finishing this now!",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 0.86,
+          "emotion_tag": "HAP"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "finish this u.",
+      "syllables": 4,
+      "estimated_duration": 1.1428571428571428,
+      "duration_ratio": 0.5714285714285714,
+      "emotion": "hap",
+      "emotion_confidence": 0.9979,
+      "emotion_tag": "HAP",
+      "text_with_emotion": "HAP finish this u.",
+      "audio_file": "work/voice_clips\\segment_020_SPEAKER_02.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "hap",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      }
+    }
+  ],
+  "clips_synced": [
+    {
+      "segment_id": 1,
+      "original_text": "\u6211\u306f\u661f\u306e\u7cbe\u970a",
+      "speaker": "SPEAKER_03",
+      "start": 6.532,
+      "end": 8.02,
+      "duration": 1.488,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I am a star spirit.",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.15,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I'm a spirit of stars.",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.15,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I'm a stars spirit.",
+          "syllables": 5,
+          "estimated_duration": 1.4285714285714286,
+          "duration_ratio": 0.9600614439324117,
+          "emotion_tag": "HAP"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "I'm a stars spirit.",
+      "syllables": 5,
+      "estimated_duration": 1.4285714285714286,
+      "duration_ratio": 0.9600614439324117,
+      "emotion": "hap",
+      "emotion_confidence": 0.8122,
+      "emotion_tag": "HAP",
+      "text_with_emotion": "HAP I'm a stars spirit.",
+      "audio_file": "work/voice_clips\\segment_001_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "hap",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_001_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 2,
+      "original_text": "\u4eba\u9593\u306e\u5b50\u3088",
+      "speaker": "SPEAKER_03",
+      "start": 8.02,
+      "end": 9.76,
+      "duration": 1.74,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Oh, child of man,",
+          "syllables": 4,
+          "estimated_duration": 1.14,
+          "duration_ratio": 0.66,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "listen, Child of human.",
+          "syllables": 6,
+          "estimated_duration": 1.7142857142857142,
+          "duration_ratio": 0.9852216748768472,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Hey, you child of man.",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.82,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "listen, Child of human.",
+      "syllables": 6,
+      "estimated_duration": 1.7142857142857142,
+      "duration_ratio": 0.9852216748768472,
+      "emotion": "ang",
+      "emotion_confidence": 0.9776,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG listen, Child of human.",
+      "audio_file": "work/voice_clips\\segment_002_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_002_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 3,
+      "original_text": "\u4f55\u3092\u671b\u3080",
+      "speaker": "SPEAKER_03",
+      "start": 10.441,
+      "end": 12.0,
+      "duration": 1.559,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "what is you desire?",
+          "syllables": 6,
+          "estimated_duration": 1.7142857142857142,
+          "duration_ratio": 1.099605974525795,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "What is it you want?",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.92,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "What is it you want?",
+          "syllables": 5,
+          "estimated_duration": 1.43,
+          "duration_ratio": 0.92,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "what is you desire?",
+      "syllables": 6,
+      "estimated_duration": 1.7142857142857142,
+      "duration_ratio": 1.099605974525795,
+      "emotion": "ang",
+      "emotion_confidence": 0.9816,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG what is you desire?",
+      "audio_file": "work/voice_clips\\segment_003_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_003_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 4,
+      "original_text": "\u76ee\u3092",
+      "speaker": "SPEAKER_00",
+      "start": 12.919,
+      "end": 13.36,
+      "duration": 0.441,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "the sight",
+          "syllables": 2,
+          "estimated_duration": 0.5714285714285714,
+          "duration_ratio": 1.295756397797214,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Watch it!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 1.3,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Eyes up!",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 1.94,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "the sight",
+      "syllables": 2,
+      "estimated_duration": 0.5714285714285714,
+      "duration_ratio": 1.295756397797214,
+      "emotion": "ang",
+      "emotion_confidence": 0.9848,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG the sight",
+      "audio_file": "work/voice_clips\\segment_004_SPEAKER_00.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_004_SPEAKER_00.wav"
+    },
+    {
+      "segment_id": 5,
+      "original_text": "\u5168\u3066\u3092\u898b\u901a\u3059\u7cbe\u970a\u306e\u76ee\u3092",
+      "speaker": "SPEAKER_00",
+      "start": 14.799,
+      "end": 17.0,
+      "duration": 2.201,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "The spirit's all-seeing eye.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 0.91,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "The spirit sees everything.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 0.91,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "The spirit's eye sees it all.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.04,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "The spirit's eye sees it all.",
+      "syllables": 8,
+      "estimated_duration": 2.29,
+      "duration_ratio": 1.04,
+      "emotion": "ang",
+      "emotion_confidence": 0.9917,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG The spirit's eye sees it all.",
+      "audio_file": "work/voice_clips\\segment_005_SPEAKER_00.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_005_SPEAKER_00.wav"
+    },
+    {
+      "segment_id": 6,
+      "original_text": "\u53e4\u304d\u540d\u5f79\u306b\u5f93\u3044",
+      "speaker": "SPEAKER_03",
+      "start": 19.075,
+      "end": 21.14,
+      "duration": 2.065,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I follow the old traditions.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.11,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I\u2019ll stick to the covenant of old.",
+          "syllables": 9,
+          "estimated_duration": 2.5714285714285716,
+          "duration_ratio": 1.245243860255967,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I\u2019ll honor the old traditions.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.11,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "I\u2019ll stick to the covenant of old.",
+      "syllables": 9,
+      "estimated_duration": 2.5714285714285716,
+      "duration_ratio": 1.245243860255967,
+      "emotion": "ang",
+      "emotion_confidence": 0.9994,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I\u2019ll stick to the covenant of old.",
+      "audio_file": "work/voice_clips\\segment_006_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_006_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 7,
+      "original_text": "\u6211\u304c\u53cb\u304c\u541b\u306e\u5148\u7956\u304b\u3089\u53d7\u3051\u305f\u6069\u306b\u5831\u3044\u308b\u305f\u3081",
+      "speaker": "SPEAKER_03",
+      "start": 21.14,
+      "end": 25.24,
+      "duration": 4.1,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "To repay the kindness given by your ancestors to us,",
+          "syllables": 14,
+          "estimated_duration": 4.0,
+          "duration_ratio": 0.9756097560975611,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "To honor my friend\u2019s debt to your ancestors,",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.7,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "To repay my friend\u2019s debt to your ancestors,",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.7,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "To repay the kindness given by your ancestors to us,",
+      "syllables": 14,
+      "estimated_duration": 4.0,
+      "duration_ratio": 0.9756097560975611,
+      "emotion": "ang",
+      "emotion_confidence": 0.9997,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG To repay the kindness given by your ancestors to us,",
+      "audio_file": "work/voice_clips\\segment_007_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_007_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 8,
+      "original_text": "\u7cbe\u970a\u306e\u529b\u3092\u4e0e\u3048\u3088\u3046",
+      "speaker": "SPEAKER_03",
+      "start": 25.24,
+      "end": 28.18,
+      "duration": 2.94,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "I'll lend you the power of the spirits.",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.97,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Let's channel the spirits' power for you.",
+          "syllables": 10,
+          "estimated_duration": 2.86,
+          "duration_ratio": 0.97,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I shall grant you the power of spirits.",
+          "syllables": 10,
+          "estimated_duration": 2.857142857142857,
+          "duration_ratio": 0.9718172983479106,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "I shall grant you the power of spirits.",
+      "syllables": 10,
+      "estimated_duration": 2.857142857142857,
+      "duration_ratio": 0.9718172983479106,
+      "emotion": "ang",
+      "emotion_confidence": 0.9693,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I shall grant you the power of spirits.",
+      "audio_file": "work/voice_clips\\segment_008_SPEAKER_03.wav",
+      "voice_sample": "sample_voices\\female\\Chloe.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_008_SPEAKER_03.wav"
+    },
+    {
+      "segment_id": 9,
+      "original_text": "\u3093",
+      "speaker": "UNKNOWN",
+      "start": 30.0,
+      "end": 32.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Come on, just say it already.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "i can see it now,",
+          "syllables": 5,
+          "estimated_duration": 1.4285714285714286,
+          "duration_ratio": 0.7142857142857143,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Just say it, come on already.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "i can see it now,",
+      "syllables": 5,
+      "estimated_duration": 1.4285714285714286,
+      "duration_ratio": 0.7142857142857143,
+      "emotion": "ang",
+      "emotion_confidence": 0.5043,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG i can see it now,",
+      "audio_file": "work/voice_clips\\segment_009_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "neutral",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_009_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 10,
+      "original_text": "\u5bb6 \u5f85\u6a5f\u3092\u6f02\u3046\u30de\u30ca\u306b\u7cbe\u970a\u306e\u30b9\u30c6\u30fc\u30bf\u30b9\u3084\u771f\u306e\u540d\u524d\u307e\u3067\u304c",
+      "speaker": "SPEAKER_01",
+      "start": 45.54,
+      "end": 52.84,
+      "duration": 7.3,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "In the air, I can feel the mana waiting, even the spirits' true names.",
+          "syllables": 19,
+          "estimated_duration": 5.43,
+          "duration_ratio": 0.74,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "I can sense the mana lingering here, even the spirits' true names and stats around me.",
+          "syllables": 25,
+          "estimated_duration": 7.142857142857143,
+          "duration_ratio": 0.9784735812133073,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "I can feel mana drifting here, even the spirits\u2019 true names and their stats.",
+          "syllables": 20,
+          "estimated_duration": 5.71,
+          "duration_ratio": 0.78,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "I can sense the mana lingering here, even the spirits' true names and stats around me.",
+      "syllables": 25,
+      "estimated_duration": 7.142857142857143,
+      "duration_ratio": 0.9784735812133073,
+      "emotion": "ang",
+      "emotion_confidence": 0.969,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG I can sense the mana lingering here, even the spirits' true names and stats around me.",
+      "audio_file": "work/voice_clips\\segment_010_SPEAKER_01.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_010_SPEAKER_01.wav"
+    },
+    {
+      "segment_id": 11,
+      "original_text": "\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3057\u305f",
+      "speaker": "UNKNOWN",
+      "start": 53.945,
+      "end": 54.84,
+      "duration": 0.895,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "huuu..",
+          "syllables": 1,
+          "estimated_duration": 0.2857142857142857,
+          "duration_ratio": 0.31923383878691136,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Thanks a lot!",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 0.96,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Thanks a bunch.",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 0.96,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Thanks a bunch.",
+      "syllables": 3,
+      "estimated_duration": 0.86,
+      "duration_ratio": 0.96,
+      "emotion": "ang",
+      "emotion_confidence": 0.9466,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Thanks a bunch.",
+      "audio_file": "work/voice_clips\\segment_011_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_011_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 12,
+      "original_text": "\u304f\u3063",
+      "speaker": "UNKNOWN",
+      "start": 60.0,
+      "end": 61.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "ughh!",
+          "syllables": 1,
+          "estimated_duration": 0.2857142857142857,
+          "duration_ratio": 0.2857142857142857,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Ugh!",
+          "syllables": 1,
+          "estimated_duration": 0.29,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Ugh!",
+          "syllables": 1,
+          "estimated_duration": 0.29,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "ughh!",
+      "syllables": 1,
+      "estimated_duration": 0.2857142857142857,
+      "duration_ratio": 0.2857142857142857,
+      "emotion": "ang",
+      "emotion_confidence": 0.9046,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG ughh!",
+      "audio_file": "work/voice_clips\\segment_012_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\juriya.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_012_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 13,
+      "original_text": "\u4eba\u9593\u3069\u3082",
+      "speaker": "SPEAKER_04",
+      "start": 63.244,
+      "end": 64.0,
+      "duration": 0.756,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "you humans..",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 1.1337868480725624,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You humans",
+          "syllables": 3,
+          "estimated_duration": 0.86,
+          "duration_ratio": 1.13,
+          "emotion_tag": "HAP"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "You all",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.76,
+          "emotion_tag": "HAP"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "you humans..",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 1.1337868480725624,
+      "emotion": "hap",
+      "emotion_confidence": 0.5703,
+      "emotion_tag": "HAP",
+      "text_with_emotion": "HAP you humans..",
+      "audio_file": "work/voice_clips\\segment_013_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "neutral",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_013_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 14,
+      "original_text": "\u8cb4\u69d8\u3089\u306f\u6b7b\u306e\u5927\u5730\u307e\u3067",
+      "speaker": "SPEAKER_04",
+      "start": 65.0,
+      "end": 67.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "You won't escape this fate.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.14,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You\u2019re headed for the grave now.",
+          "syllables": 9,
+          "estimated_duration": 2.57,
+          "duration_ratio": 1.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "You\u2019ll meet your end right here.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 1.0,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "You\u2019ll meet your end right here.",
+      "syllables": 7,
+      "estimated_duration": 2.0,
+      "duration_ratio": 1.0,
+      "emotion": "ang",
+      "emotion_confidence": 0.6263,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG You\u2019ll meet your end right here.",
+      "audio_file": "work/voice_clips\\segment_014_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_014_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 15,
+      "original_text": "\u6700\u5f8c\u306b\u6b8b\u3063\u305f\u6211\u3089\u306e\u5b89\u606f\u306e\u5730\u307e\u3067\u596a\u304a\u3046\u3068\u3059\u308b\u306e\u304b",
+      "speaker": "SPEAKER_04",
+      "start": 67.0,
+      "end": 71.0,
+      "duration": 4.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Are you trying to take what\u2019s left of our sanctuary?",
+          "syllables": 13,
+          "estimated_duration": 3.71,
+          "duration_ratio": 0.93,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "You really want to steal our last safe haven?",
+          "syllables": 11,
+          "estimated_duration": 3.14,
+          "duration_ratio": 0.79,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "So, you plan to take away our last refuge?",
+          "syllables": 13,
+          "estimated_duration": 3.71,
+          "duration_ratio": 0.93,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "Are you trying to take what\u2019s left of our sanctuary?",
+      "syllables": 13,
+      "estimated_duration": 3.71,
+      "duration_ratio": 0.93,
+      "emotion": "ang",
+      "emotion_confidence": 0.9742,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Are you trying to take what\u2019s left of our sanctuary?",
+      "audio_file": "work/voice_clips\\segment_015_SPEAKER_04.wav",
+      "voice_sample": "sample_voices\\male\\nico robin_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_015_SPEAKER_04.wav"
+    },
+    {
+      "segment_id": 16,
+      "original_text": "\u30d6\u30ec\u30c3\u30c9 \u7832\u6483\u3092",
+      "speaker": "UNKNOWN",
+      "start": 72.0,
+      "end": 73.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Bread, fire the cannon!",
+          "syllables": 6,
+          "estimated_duration": 1.71,
+          "duration_ratio": 1.71,
+          "emotion_tag": "NEU"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "bread, cannon!",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 0.8571428571428571,
+          "emotion_tag": "NEU"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Bread, launch the shot!",
+          "syllables": 4,
+          "estimated_duration": 1.14,
+          "duration_ratio": 1.14,
+          "emotion_tag": "NEU"
+        }
+      ],
+      "selected_attempt": 2,
+      "selected_strategy": "duration_matched",
+      "translated_text": "bread, cannon!",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 0.8571428571428571,
+      "emotion": "neu",
+      "emotion_confidence": 0.7478,
+      "emotion_tag": "NEU",
+      "text_with_emotion": "NEU bread, cannon!",
+      "audio_file": "work/voice_clips\\segment_016_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "neu",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_016_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 17,
+      "original_text": "\u304a\u3046",
+      "speaker": "UNKNOWN",
+      "start": 74.0,
+      "end": 75.0,
+      "duration": 1.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "on it too.",
+          "syllables": 3,
+          "estimated_duration": 0.8571428571428571,
+          "duration_ratio": 0.8571428571428571,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Oh, hey!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.57,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Oh, hey!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.57,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 1,
+      "selected_strategy": "natural",
+      "translated_text": "on it too.",
+      "syllables": 3,
+      "estimated_duration": 0.8571428571428571,
+      "duration_ratio": 0.8571428571428571,
+      "emotion": "ang",
+      "emotion_confidence": 0.9984,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG on it too.",
+      "audio_file": "work/voice_clips\\segment_017_UNKNOWN.wav",
+      "voice_sample": "sample_voices\\male\\petergriffin.wav",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_017_UNKNOWN.wav"
+    },
+    {
+      "segment_id": 18,
+      "original_text": "\u7b2c\u4e03\u56de\u30a4\u30de\u30b8\u30c1",
+      "speaker": "SPEAKER_02",
+      "start": 90.297,
+      "end": 92.0,
+      "duration": 1.703,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "It\u2019s the seventh Imagichi.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.34,
+          "emotion_tag": "SAD"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "It's the seventh Imagichi.",
+          "syllables": 8,
+          "estimated_duration": 2.29,
+          "duration_ratio": 1.34,
+          "emotion_tag": "SAD"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Thats about level 7 magic.",
+          "syllables": 7,
+          "estimated_duration": 2.0,
+          "duration_ratio": 1.1743981209630063,
+          "emotion_tag": "SAD"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Thats about level 7 magic.",
+      "syllables": 7,
+      "estimated_duration": 2.0,
+      "duration_ratio": 1.1743981209630063,
+      "emotion": "sad",
+      "emotion_confidence": 0.9358,
+      "emotion_tag": "SAD",
+      "text_with_emotion": "SAD Thats about level 7 magic.",
+      "audio_file": "work/voice_clips\\segment_018_SPEAKER_02.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "sad",
+      "prosody": {
+        "speed": 0.85,
+        "pitch_shift": 0.9,
+        "temp": 0.3,
+        "desc": "sadly"
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_018_SPEAKER_02.wav"
+    },
+    {
+      "segment_id": 19,
+      "original_text": "\u30df\u30e7\u30eb\u30cb\u30eb",
+      "speaker": "SPEAKER_02",
+      "start": 93.0,
+      "end": 95.0,
+      "duration": 2.0,
+      "all_attempts": [
+        {
+          "attempt": 1,
+          "strategy": "natural",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 2,
+          "strategy": "duration_matched",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        },
+        {
+          "attempt": 3,
+          "strategy": "refined",
+          "translation": "Mjolnir!",
+          "syllables": 2,
+          "estimated_duration": 0.57,
+          "duration_ratio": 0.29,
+          "emotion_tag": "ANG"
+        }
+      ],
+      "selected_attempt": 3,
+      "selected_strategy": "refined",
+      "translated_text": "Mjolnir!",
+      "syllables": 2,
+      "estimated_duration": 0.57,
+      "duration_ratio": 0.29,
+      "emotion": "ang",
+      "emotion_confidence": 0.9938,
+      "emotion_tag": "ANG",
+      "text_with_emotion": "ANG Mjolnir!",
+      "audio_file": "work/voice_clips\\segment_019_SPEAKER_02.wav",
+      "voice_sample": "sample_voices\\female\\tsunade_voice sample.mp3",
+      "emotion_used": "ang",
+      "prosody": {
+        "speed": 1.0,
+        "pitch_shift": 1.0,
+        "temp": 0.35,
+        "desc": ""
+      },
+      "audio_file_synced": "work/voice_clips_synced/segment_019_SPEAKER_02.wav"
+    }
+  ]
+}

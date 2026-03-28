@@ -1,0 +1,2097 @@
+{
+  "timestamp": "2026-03-17T16:54:20.461103",
+  "total_segments": 22,
+  "language": "ja",
+  "segments": [
+    {
+      "id": 0,
+      "start": 8.569,
+      "end": 10.02,
+      "duration": 1.451,
+      "text": "ここは…",
+      "words": [
+        {
+          "word": "こ",
+          "start": 8.569,
+          "end": 9.959,
+          "score": 0.985
+        },
+        {
+          "word": "こ",
+          "start": 9.959,
+          "end": 9.98,
+          "score": 0.0
+        },
+        {
+          "word": "は",
+          "start": 9.98,
+          "end": 10.0,
+          "score": 0.0
+        },
+        {
+          "word": "…",
+          "start": 10.0,
+          "end": 10.02,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.39,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 33,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 1,
+      "start": 11.22,
+      "end": 14.02,
+      "duration": 2.8,
+      "text": "母さん…",
+      "words": [
+        {
+          "word": "母",
+          "start": 11.22,
+          "end": 12.945,
+          "score": 0.953
+        },
+        {
+          "word": "さ",
+          "start": 12.945,
+          "end": 12.965,
+          "score": 0.712
+        },
+        {
+          "word": "ん",
+          "start": 12.965,
+          "end": 12.985,
+          "score": 0.982
+        },
+        {
+          "word": "…",
+          "start": 12.985,
+          "end": 14.02,
+          "score": 0.965
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.725,
+          "text_chunk": "母"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "さ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 1.035,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 59,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 2,
+      "start": 15.12,
+      "end": 17.02,
+      "duration": 1.9,
+      "text": "そんなはずはない…",
+      "words": [
+        {
+          "word": "そ",
+          "start": 15.12,
+          "end": 15.815,
+          "score": 0.917
+        },
+        {
+          "word": "ん",
+          "start": 15.815,
+          "end": 15.835,
+          "score": 0.059
+        },
+        {
+          "word": "な",
+          "start": 15.835,
+          "end": 16.387,
+          "score": 0.915
+        },
+        {
+          "word": "は",
+          "start": 16.387,
+          "end": 16.407,
+          "score": 0.0
+        },
+        {
+          "word": "ず",
+          "start": 16.407,
+          "end": 16.428,
+          "score": 0.0
+        },
+        {
+          "word": "は",
+          "start": 16.428,
+          "end": 16.448,
+          "score": 0.933
+        },
+        {
+          "word": "な",
+          "start": 16.448,
+          "end": 16.612,
+          "score": 0.958
+        },
+        {
+          "word": "い",
+          "start": 16.612,
+          "end": 17.0,
+          "score": 0.947
+        },
+        {
+          "word": "…",
+          "start": 17.0,
+          "end": 17.02,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.695,
+          "text_chunk": "そ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 0.552,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ず"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.164,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.388,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 41,
+        "emotion": "hap",
+        "emotion_confidence": 0.9998526573181152
+      }
+    },
+    {
+      "id": 3,
+      "start": 18.44,
+      "end": 21.2,
+      "duration": 2.76,
+      "text": "俺のおふくろはもっと…",
+      "words": [
+        {
+          "word": "俺",
+          "start": 18.44,
+          "end": 18.826,
+          "score": 0.833
+        },
+        {
+          "word": "の",
+          "start": 18.826,
+          "end": 18.887,
+          "score": 0.999
+        },
+        {
+          "word": "お",
+          "start": 18.887,
+          "end": 19.353,
+          "score": 0.909
+        },
+        {
+          "word": "ふ",
+          "start": 19.353,
+          "end": 19.374,
+          "score": 0.0
+        },
+        {
+          "word": "く",
+          "start": 19.374,
+          "end": 19.394,
+          "score": 0.0
+        },
+        {
+          "word": "ろ",
+          "start": 19.394,
+          "end": 19.414,
+          "score": 0.172
+        },
+        {
+          "word": "は",
+          "start": 19.414,
+          "end": 19.78,
+          "score": 1.0
+        },
+        {
+          "word": "も",
+          "start": 19.78,
+          "end": 20.023,
+          "score": 0.998
+        },
+        {
+          "word": "っ",
+          "start": 20.023,
+          "end": 20.084,
+          "score": 0.335
+        },
+        {
+          "word": "と",
+          "start": 20.084,
+          "end": 20.226,
+          "score": 0.968
+        },
+        {
+          "word": "…",
+          "start": 20.226,
+          "end": 21.2,
+          "score": 0.978
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.386,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.466,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ふ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "く"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ろ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.366,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.243,
+          "text_chunk": "も"
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "と"
+        },
+        {
+          "type": "speech",
+          "duration": 0.974,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 25,
+        "emotion": "hap",
+        "emotion_confidence": 0.9999958276748657
+      }
+    },
+    {
+      "id": 4,
+      "start": 21.18,
+      "end": 22.86,
+      "duration": 1.68,
+      "text": "頭に動けない…",
+      "words": [
+        {
+          "word": "頭",
+          "start": 21.18,
+          "end": 21.877,
+          "score": 0.849
+        },
+        {
+          "word": "に",
+          "start": 21.877,
+          "end": 21.897,
+          "score": 0.808
+        },
+        {
+          "word": "動",
+          "start": 21.897,
+          "end": 22.061,
+          "score": 1.0
+        },
+        {
+          "word": "け",
+          "start": 22.061,
+          "end": 22.184,
+          "score": 0.985
+        },
+        {
+          "word": "な",
+          "start": 22.184,
+          "end": 22.307,
+          "score": 0.998
+        },
+        {
+          "word": "い",
+          "start": 22.307,
+          "end": 22.799,
+          "score": 1.0
+        },
+        {
+          "word": "…",
+          "start": 22.799,
+          "end": 22.86,
+          "score": 0.667
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.697,
+          "text_chunk": "頭"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.164,
+          "text_chunk": "動"
+        },
+        {
+          "type": "speech",
+          "duration": 0.123,
+          "text_chunk": "け"
+        },
+        {
+          "type": "speech",
+          "duration": 0.123,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.492,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 28,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 5,
+      "start": 22.84,
+      "end": 24.021,
+      "duration": 1.181,
+      "text": "どうなってるんだ…",
+      "words": [
+        {
+          "word": "ど",
+          "start": 22.84,
+          "end": 23.109,
+          "score": 0.796
+        },
+        {
+          "word": "う",
+          "start": 23.109,
+          "end": 23.13,
+          "score": 0.023
+        },
+        {
+          "word": "な",
+          "start": 23.13,
+          "end": 23.296,
+          "score": 0.999
+        },
+        {
+          "word": "っ",
+          "start": 23.296,
+          "end": 23.337,
+          "score": 0.947
+        },
+        {
+          "word": "て",
+          "start": 23.337,
+          "end": 23.441,
+          "score": 0.858
+        },
+        {
+          "word": "る",
+          "start": 23.441,
+          "end": 23.565,
+          "score": 0.856
+        },
+        {
+          "word": "ん",
+          "start": 23.565,
+          "end": 23.669,
+          "score": 0.999
+        },
+        {
+          "word": "だ",
+          "start": 23.669,
+          "end": 23.959,
+          "score": 0.984
+        },
+        {
+          "word": "…",
+          "start": 23.959,
+          "end": 24.021,
+          "score": 0.666
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.269,
+          "text_chunk": "ど"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "う"
+        },
+        {
+          "type": "speech",
+          "duration": 0.166,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.104,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 0.124,
+          "text_chunk": "る"
+        },
+        {
+          "type": "speech",
+          "duration": 0.104,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 0.29,
+          "text_chunk": "だ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.062,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 39,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 6,
+      "start": 25.08,
+      "end": 26.341,
+      "duration": 1.261,
+      "text": "これは…",
+      "words": [
+        {
+          "word": "こ",
+          "start": 25.08,
+          "end": 26.279,
+          "score": 0.931
+        },
+        {
+          "word": "れ",
+          "start": 26.279,
+          "end": 26.299,
+          "score": 0.0
+        },
+        {
+          "word": "は",
+          "start": 26.299,
+          "end": 26.32,
+          "score": 0.0
+        },
+        {
+          "word": "…",
+          "start": 26.32,
+          "end": 26.341,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.199,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "れ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 28,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 7,
+      "start": 26.32,
+      "end": 28.02,
+      "duration": 1.7,
+      "text": "俺のステータスか…",
+      "words": [
+        {
+          "word": "俺",
+          "start": 26.32,
+          "end": 26.853,
+          "score": 0.816
+        },
+        {
+          "word": "の",
+          "start": 26.853,
+          "end": 26.873,
+          "score": 0.002
+        },
+        {
+          "word": "ス",
+          "start": 26.873,
+          "end": 27.426,
+          "score": 0.853
+        },
+        {
+          "word": "テ",
+          "start": 27.426,
+          "end": 27.447,
+          "score": 0.0
+        },
+        {
+          "word": "ー",
+          "start": 27.447,
+          "end": 27.467,
+          "score": 0.0
+        },
+        {
+          "word": "タ",
+          "start": 27.467,
+          "end": 27.488,
+          "score": 0.0
+        },
+        {
+          "word": "ス",
+          "start": 27.488,
+          "end": 27.508,
+          "score": 0.929
+        },
+        {
+          "word": "か",
+          "start": 27.508,
+          "end": 27.959,
+          "score": 0.983
+        },
+        {
+          "word": "…",
+          "start": 27.959,
+          "end": 28.02,
+          "score": 0.667
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.533,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.553,
+          "text_chunk": "ス"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "テ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ー"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "タ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ス"
+        },
+        {
+          "type": "speech",
+          "duration": 0.451,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.061,
+          "text_chunk": "…"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 48,
+        "emotion": "ang",
+        "emotion_confidence": 0.9962390661239624
+      }
+    },
+    {
+      "id": 8,
+      "start": 28.643,
+      "end": 30.021,
+      "duration": 1.378,
+      "text": "レベルが1に戻って",
+      "words": [
+        {
+          "word": "レ",
+          "start": 28.643,
+          "end": 29.445,
+          "score": 0.846
+        },
+        {
+          "word": "ベ",
+          "start": 29.445,
+          "end": 29.465,
+          "score": 0.0
+        },
+        {
+          "word": "ル",
+          "start": 29.465,
+          "end": 29.486,
+          "score": 0.0
+        },
+        {
+          "word": "が",
+          "start": 29.486,
+          "end": 29.507,
+          "score": 0.0
+        },
+        {
+          "word": "1",
+          "start": 29.507,
+          "end": 29.527,
+          "score": 1.0
+        },
+        {
+          "word": "に",
+          "start": 29.527,
+          "end": 29.63,
+          "score": 0.998
+        },
+        {
+          "word": "戻",
+          "start": 29.63,
+          "end": 29.918,
+          "score": 1.0
+        },
+        {
+          "word": "っ",
+          "start": 29.918,
+          "end": 29.959,
+          "score": 0.487
+        },
+        {
+          "word": "て",
+          "start": 29.959,
+          "end": 30.021,
+          "score": 0.666
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.802,
+          "text_chunk": "レ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ベ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ル"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "1"
+        },
+        {
+          "type": "speech",
+          "duration": 0.103,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.288,
+          "text_chunk": "戻"
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.062,
+          "text_chunk": "て"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 53,
+        "emotion": "ang",
+        "emotion_confidence": 0.9999020099639893
+      }
+    },
+    {
+      "id": 9,
+      "start": 30.0,
+      "end": 32.84,
+      "duration": 2.84,
+      "text": "名前なし",
+      "words": [
+        {
+          "word": "名",
+          "start": 30.0,
+          "end": 32.779,
+          "score": 0.965
+        },
+        {
+          "word": "前",
+          "start": 32.779,
+          "end": 32.8,
+          "score": 0.0
+        },
+        {
+          "word": "な",
+          "start": 32.8,
+          "end": 32.82,
+          "score": 0.0
+        },
+        {
+          "word": "し",
+          "start": 32.82,
+          "end": 32.84,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 2.779,
+          "text_chunk": "名"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "前"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "し"
+        }
+      ],
+      "speaker": "SPEAKER_02",
+      "analysis": {
+        "gender": "female",
+        "age": 41,
+        "emotion": "ang",
+        "emotion_confidence": 0.9998472929000854
+      }
+    },
+    {
+      "id": 10,
+      "start": 34.139,
+      "end": 35.281,
+      "duration": 1.142,
+      "text": "陛下",
+      "words": [
+        {
+          "word": "陛",
+          "start": 34.139,
+          "end": 35.26,
+          "score": 0.93
+        },
+        {
+          "word": "下",
+          "start": 35.26,
+          "end": 35.281,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.121,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "下"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 20,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 11,
+      "start": 35.26,
+      "end": 38.52,
+      "duration": 3.26,
+      "text": "よいそのままにしておれ",
+      "words": [
+        {
+          "word": "よ",
+          "start": 35.26,
+          "end": 36.536,
+          "score": 0.952
+        },
+        {
+          "word": "い",
+          "start": 36.536,
+          "end": 36.556,
+          "score": 0.999
+        },
+        {
+          "word": "そ",
+          "start": 36.556,
+          "end": 36.738,
+          "score": 0.995
+        },
+        {
+          "word": "の",
+          "start": 36.738,
+          "end": 37.062,
+          "score": 0.804
+        },
+        {
+          "word": "ま",
+          "start": 37.062,
+          "end": 37.082,
+          "score": 0.0
+        },
+        {
+          "word": "ま",
+          "start": 37.082,
+          "end": 37.103,
+          "score": 1.0
+        },
+        {
+          "word": "に",
+          "start": 37.103,
+          "end": 37.245,
+          "score": 0.858
+        },
+        {
+          "word": "し",
+          "start": 37.245,
+          "end": 38.459,
+          "score": 0.954
+        },
+        {
+          "word": "て",
+          "start": 38.459,
+          "end": 38.48,
+          "score": 0.0
+        },
+        {
+          "word": "お",
+          "start": 38.48,
+          "end": 38.5,
+          "score": 0.0
+        },
+        {
+          "word": "れ",
+          "start": 38.5,
+          "end": 38.52,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.276,
+          "text_chunk": "よ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.182,
+          "text_chunk": "そ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.324,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 1.214,
+          "text_chunk": "し"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "て"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "れ"
+        }
+      ],
+      "speaker": "SPEAKER_00",
+      "analysis": {
+        "gender": "male",
+        "age": 64,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 12,
+      "start": 39.618,
+      "end": 40.142,
+      "duration": 0.524,
+      "text": "陛下",
+      "words": [
+        {
+          "word": "陛",
+          "start": 39.618,
+          "end": 40.12,
+          "score": 0.882
+        },
+        {
+          "word": "下",
+          "start": 40.12,
+          "end": 40.142,
+          "score": 0.002
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.502,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 0.022,
+          "text_chunk": "下"
+        }
+      ],
+      "speaker": "SPEAKER_01",
+      "analysis": {
+        "gender": "female",
+        "age": 55,
+        "emotion": "neu",
+        "emotion_confidence": 0.9838041663169861
+      }
+    },
+    {
+      "id": 13,
+      "start": 40.12,
+      "end": 42.56,
+      "duration": 2.44,
+      "text": "いい顔だ",
+      "words": [
+        {
+          "word": "い",
+          "start": 40.12,
+          "end": 41.645,
+          "score": 0.945
+        },
+        {
+          "word": "い",
+          "start": 41.645,
+          "end": 41.666,
+          "score": 1.0
+        },
+        {
+          "word": "顔",
+          "start": 41.666,
+          "end": 42.011,
+          "score": 0.997
+        },
+        {
+          "word": "だ",
+          "start": 42.011,
+          "end": 42.56,
+          "score": 0.927
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.525,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.345,
+          "text_chunk": "顔"
+        },
+        {
+          "type": "speech",
+          "duration": 0.549,
+          "text_chunk": "だ"
+        }
+      ],
+      "speaker": "SPEAKER_00",
+      "analysis": {
+        "gender": "male",
+        "age": 70,
+        "emotion": "neu",
+        "emotion_confidence": 0.9999387264251709
+      }
+    },
+    {
+      "id": 14,
+      "start": 43.037,
+      "end": 45.3,
+      "duration": 2.263,
+      "text": "眉間にお前の面影がある",
+      "words": [
+        {
+          "word": "眉",
+          "start": 43.037,
+          "end": 43.465,
+          "score": 0.858
+        },
+        {
+          "word": "間",
+          "start": 43.465,
+          "end": 43.486,
+          "score": 1.0
+        },
+        {
+          "word": "に",
+          "start": 43.486,
+          "end": 43.649,
+          "score": 1.0
+        },
+        {
+          "word": "お",
+          "start": 43.649,
+          "end": 43.812,
+          "score": 0.876
+        },
+        {
+          "word": "前",
+          "start": 43.812,
+          "end": 44.077,
+          "score": 1.0
+        },
+        {
+          "word": "の",
+          "start": 44.077,
+          "end": 44.322,
+          "score": 0.918
+        },
+        {
+          "word": "面",
+          "start": 44.322,
+          "end": 44.77,
+          "score": 0.888
+        },
+        {
+          "word": "影",
+          "start": 44.77,
+          "end": 44.791,
+          "score": 0.047
+        },
+        {
+          "word": "が",
+          "start": 44.791,
+          "end": 44.933,
+          "score": 0.999
+        },
+        {
+          "word": "あ",
+          "start": 44.933,
+          "end": 45.076,
+          "score": 0.981
+        },
+        {
+          "word": "る",
+          "start": 45.076,
+          "end": 45.3,
+          "score": 0.909
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.428,
+          "text_chunk": "眉"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "間"
+        },
+        {
+          "type": "speech",
+          "duration": 0.163,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.163,
+          "text_chunk": "お"
+        },
+        {
+          "type": "speech",
+          "duration": 0.265,
+          "text_chunk": "前"
+        },
+        {
+          "type": "speech",
+          "duration": 0.245,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.448,
+          "text_chunk": "面"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "影"
+        },
+        {
+          "type": "speech",
+          "duration": 0.142,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.143,
+          "text_chunk": "あ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.224,
+          "text_chunk": "る"
+        }
+      ],
+      "speaker": "SPEAKER_00",
+      "analysis": {
+        "gender": "male",
+        "age": 72,
+        "emotion": "neu",
+        "emotion_confidence": 0.9999991655349731
+      }
+    },
+    {
+      "id": 15,
+      "start": 45.925,
+      "end": 46.861,
+      "duration": 0.936,
+      "text": "ありがとうございます",
+      "words": [
+        {
+          "word": "あ",
+          "start": 45.925,
+          "end": 46.154,
+          "score": 0.724
+        },
+        {
+          "word": "り",
+          "start": 46.154,
+          "end": 46.175,
+          "score": 0.999
+        },
+        {
+          "word": "が",
+          "start": 46.175,
+          "end": 46.32,
+          "score": 0.997
+        },
+        {
+          "word": "と",
+          "start": 46.32,
+          "end": 46.736,
+          "score": 0.895
+        },
+        {
+          "word": "う",
+          "start": 46.736,
+          "end": 46.757,
+          "score": 0.0
+        },
+        {
+          "word": "ご",
+          "start": 46.757,
+          "end": 46.778,
+          "score": 0.0
+        },
+        {
+          "word": "ざ",
+          "start": 46.778,
+          "end": 46.798,
+          "score": 0.0
+        },
+        {
+          "word": "い",
+          "start": 46.798,
+          "end": 46.819,
+          "score": 0.0
+        },
+        {
+          "word": "ま",
+          "start": 46.819,
+          "end": 46.84,
+          "score": 0.001
+        },
+        {
+          "word": "す",
+          "start": 46.84,
+          "end": 46.861,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.229,
+          "text_chunk": "あ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "り"
+        },
+        {
+          "type": "speech",
+          "duration": 0.145,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.416,
+          "text_chunk": "と"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "う"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ご"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ざ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "す"
+        }
+      ],
+      "speaker": "SPEAKER_01",
+      "analysis": {
+        "gender": "female",
+        "age": 26,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 16,
+      "start": 46.84,
+      "end": 52.1,
+      "duration": 5.26,
+      "text": "私には口元が陛下そっくりに見えます",
+      "words": [
+        {
+          "word": "私",
+          "start": 46.84,
+          "end": 48.815,
+          "score": 0.905
+        },
+        {
+          "word": "に",
+          "start": 48.815,
+          "end": 48.835,
+          "score": 0.992
+        },
+        {
+          "word": "は",
+          "start": 48.835,
+          "end": 49.541,
+          "score": 0.999
+        },
+        {
+          "word": "口",
+          "start": 49.541,
+          "end": 49.782,
+          "score": 0.976
+        },
+        {
+          "word": "元",
+          "start": 49.782,
+          "end": 50.044,
+          "score": 1.0
+        },
+        {
+          "word": "が",
+          "start": 50.044,
+          "end": 50.629,
+          "score": 0.981
+        },
+        {
+          "word": "陛",
+          "start": 50.629,
+          "end": 50.972,
+          "score": 0.882
+        },
+        {
+          "word": "下",
+          "start": 50.972,
+          "end": 50.992,
+          "score": 0.797
+        },
+        {
+          "word": "そ",
+          "start": 50.992,
+          "end": 51.213,
+          "score": 0.985
+        },
+        {
+          "word": "っ",
+          "start": 51.213,
+          "end": 51.254,
+          "score": 0.499
+        },
+        {
+          "word": "く",
+          "start": 51.254,
+          "end": 51.375,
+          "score": 1.0
+        },
+        {
+          "word": "り",
+          "start": 51.375,
+          "end": 51.496,
+          "score": 0.996
+        },
+        {
+          "word": "に",
+          "start": 51.496,
+          "end": 51.637,
+          "score": 0.999
+        },
+        {
+          "word": "見",
+          "start": 51.637,
+          "end": 51.758,
+          "score": 0.833
+        },
+        {
+          "word": "え",
+          "start": 51.758,
+          "end": 51.858,
+          "score": 1.0
+        },
+        {
+          "word": "ま",
+          "start": 51.858,
+          "end": 52.02,
+          "score": 0.88
+        },
+        {
+          "word": "す",
+          "start": 52.02,
+          "end": 52.1,
+          "score": 0.75
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.975,
+          "text_chunk": "私"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.706,
+          "text_chunk": "は"
+        },
+        {
+          "type": "speech",
+          "duration": 0.241,
+          "text_chunk": "口"
+        },
+        {
+          "type": "speech",
+          "duration": 0.262,
+          "text_chunk": "元"
+        },
+        {
+          "type": "speech",
+          "duration": 0.585,
+          "text_chunk": "が"
+        },
+        {
+          "type": "speech",
+          "duration": 0.343,
+          "text_chunk": "陛"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "下"
+        },
+        {
+          "type": "speech",
+          "duration": 0.221,
+          "text_chunk": "そ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.041,
+          "text_chunk": "っ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "く"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "り"
+        },
+        {
+          "type": "speech",
+          "duration": 0.141,
+          "text_chunk": "に"
+        },
+        {
+          "type": "speech",
+          "duration": 0.121,
+          "text_chunk": "見"
+        },
+        {
+          "type": "speech",
+          "duration": 0.1,
+          "text_chunk": "え"
+        },
+        {
+          "type": "speech",
+          "duration": 0.162,
+          "text_chunk": "ま"
+        },
+        {
+          "type": "speech",
+          "duration": 0.08,
+          "text_chunk": "す"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 23,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 17,
+      "start": 52.625,
+      "end": 55.1,
+      "duration": 2.475,
+      "text": "このじいさん皇帝か何かなのか",
+      "words": [
+        {
+          "word": "こ",
+          "start": 52.625,
+          "end": 53.193,
+          "score": 0.889
+        },
+        {
+          "word": "の",
+          "start": 53.193,
+          "end": 53.213,
+          "score": 0.0
+        },
+        {
+          "word": "じ",
+          "start": 53.213,
+          "end": 53.234,
+          "score": 0.0
+        },
+        {
+          "word": "い",
+          "start": 53.234,
+          "end": 53.254,
+          "score": 1.0
+        },
+        {
+          "word": "さ",
+          "start": 53.254,
+          "end": 53.335,
+          "score": 0.977
+        },
+        {
+          "word": "ん",
+          "start": 53.335,
+          "end": 53.802,
+          "score": 0.843
+        },
+        {
+          "word": "皇",
+          "start": 53.802,
+          "end": 53.822,
+          "score": 0.0
+        },
+        {
+          "word": "帝",
+          "start": 53.822,
+          "end": 54.147,
+          "score": 0.875
+        },
+        {
+          "word": "か",
+          "start": 54.147,
+          "end": 54.167,
+          "score": 0.99
+        },
+        {
+          "word": "何",
+          "start": 54.167,
+          "end": 54.41,
+          "score": 0.917
+        },
+        {
+          "word": "か",
+          "start": 54.41,
+          "end": 54.532,
+          "score": 0.999
+        },
+        {
+          "word": "な",
+          "start": 54.532,
+          "end": 54.613,
+          "score": 0.988
+        },
+        {
+          "word": "の",
+          "start": 54.613,
+          "end": 54.735,
+          "score": 0.997
+        },
+        {
+          "word": "か",
+          "start": 54.735,
+          "end": 55.1,
+          "score": 0.877
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.568,
+          "text_chunk": "こ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "じ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.081,
+          "text_chunk": "さ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.467,
+          "text_chunk": "ん"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "皇"
+        },
+        {
+          "type": "speech",
+          "duration": 0.325,
+          "text_chunk": "帝"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.243,
+          "text_chunk": "何"
+        },
+        {
+          "type": "speech",
+          "duration": 0.122,
+          "text_chunk": "か"
+        },
+        {
+          "type": "speech",
+          "duration": 0.081,
+          "text_chunk": "な"
+        },
+        {
+          "type": "speech",
+          "duration": 0.122,
+          "text_chunk": "の"
+        },
+        {
+          "type": "speech",
+          "duration": 0.365,
+          "text_chunk": "か"
+        }
+      ],
+      "speaker": "SPEAKER_01",
+      "analysis": {
+        "gender": "female",
+        "age": 48,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 18,
+      "start": 55.08,
+      "end": 57.2,
+      "duration": 2.12,
+      "text": "一体俺に",
+      "words": [
+        {
+          "word": "一",
+          "start": 55.08,
+          "end": 57.139,
+          "score": 0.936
+        },
+        {
+          "word": "体",
+          "start": 57.139,
+          "end": 57.16,
+          "score": 0.0
+        },
+        {
+          "word": "俺",
+          "start": 57.16,
+          "end": 57.18,
+          "score": 0.0
+        },
+        {
+          "word": "に",
+          "start": 57.18,
+          "end": 57.2,
+          "score": 0.0
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 2.059,
+          "text_chunk": "一"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "体"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "俺"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "に"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 43,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 19,
+      "start": 58.006,
+      "end": 58.521,
+      "duration": 0.515,
+      "text": "何が",
+      "words": [
+        {
+          "word": "何",
+          "start": 58.006,
+          "end": 58.5,
+          "score": 0.821
+        },
+        {
+          "word": "が",
+          "start": 58.5,
+          "end": 58.521,
+          "score": 0.002
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 0.494,
+          "text_chunk": "何"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "が"
+        }
+      ],
+      "speaker": "SPEAKER_01",
+      "analysis": {
+        "gender": "female",
+        "age": 49,
+        "emotion": "neu",
+        "emotion_confidence": 0.9997639060020447
+      }
+    },
+    {
+      "id": 20,
+      "start": 58.5,
+      "end": 60.001,
+      "duration": 1.501,
+      "text": "起きちゃう",
+      "words": [
+        {
+          "word": "起",
+          "start": 58.5,
+          "end": 59.918,
+          "score": 0.957
+        },
+        {
+          "word": "き",
+          "start": 59.918,
+          "end": 59.939,
+          "score": 0.0
+        },
+        {
+          "word": "ち",
+          "start": 59.939,
+          "end": 59.959,
+          "score": 0.0
+        },
+        {
+          "word": "ゃ",
+          "start": 59.959,
+          "end": 59.98,
+          "score": 0.0
+        },
+        {
+          "word": "う",
+          "start": 59.98,
+          "end": 60.001,
+          "score": 0.001
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.418,
+          "text_chunk": "起"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "き"
+        },
+        {
+          "type": "speech",
+          "duration": 0.02,
+          "text_chunk": "ち"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "ゃ"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "う"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 31,
+        "emotion": "neu",
+        "emotion_confidence": 1.0
+      }
+    },
+    {
+      "id": 21,
+      "start": 60.0,
+      "end": 61.021,
+      "duration": 1.021,
+      "text": "いる",
+      "words": [
+        {
+          "word": "い",
+          "start": 60.0,
+          "end": 61.0,
+          "score": 0.959
+        },
+        {
+          "word": "る",
+          "start": 61.0,
+          "end": 61.021,
+          "score": 0.001
+        }
+      ],
+      "rhythm_blueprint": [
+        {
+          "type": "speech",
+          "duration": 1.0,
+          "text_chunk": "い"
+        },
+        {
+          "type": "speech",
+          "duration": 0.021,
+          "text_chunk": "る"
+        }
+      ],
+      "speaker": "UNKNOWN",
+      "analysis": {
+        "gender": "female",
+        "age": 45,
+        "emotion": "hap",
+        "emotion_confidence": 1.0
+      }
+    }
+  ]
+}

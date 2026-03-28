@@ -1,12 +1,11 @@
 # Python cache
 __pycache__/
 *.pyc
-
+.env
 # Virtual environment
-venv/
-venvv/
+anime_env/
+whisper_env/
 # Runtime folders
-output/
 work/
 logs/
 
@@ -14,3 +13,6 @@ logs/
 .vscode/
 .DS_Store
 Thumbs.db
+pretrained_models/
+wav2vec2_models/
+wav2vec2_checkpoints/

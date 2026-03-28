@@ -1,0 +1,166 @@
+{
+  "total_segments": 20,
+  "sample_rate": 22050,
+  "segments": [
+    {
+      "id": 0,
+      "start": 6.532,
+      "end": 8.02,
+      "duration": 1.488,
+      "text": "我は星の精霊",
+      "japanese_path": "work/japanese_segments/seg_000_jp.wav"
+    },
+    {
+      "id": 1,
+      "start": 8.02,
+      "end": 9.76,
+      "duration": 1.74,
+      "text": "人間の子よ",
+      "japanese_path": "work/japanese_segments/seg_001_jp.wav"
+    },
+    {
+      "id": 2,
+      "start": 10.441,
+      "end": 12.0,
+      "duration": 1.559,
+      "text": "何を望む",
+      "japanese_path": "work/japanese_segments/seg_002_jp.wav"
+    },
+    {
+      "id": 3,
+      "start": 12.919,
+      "end": 13.36,
+      "duration": 0.441,
+      "text": "目を",
+      "japanese_path": "work/japanese_segments/seg_003_jp.wav"
+    },
+    {
+      "id": 4,
+      "start": 14.799,
+      "end": 17.0,
+      "duration": 2.201,
+      "text": "全てを見通す精霊の目を",
+      "japanese_path": "work/japanese_segments/seg_004_jp.wav"
+    },
+    {
+      "id": 5,
+      "start": 19.075,
+      "end": 21.14,
+      "duration": 2.065,
+      "text": "古き名役に従い",
+      "japanese_path": "work/japanese_segments/seg_005_jp.wav"
+    },
+    {
+      "id": 6,
+      "start": 21.14,
+      "end": 25.24,
+      "duration": 4.1,
+      "text": "我が友が君の先祖から受けた恩に報いるため",
+      "japanese_path": "work/japanese_segments/seg_006_jp.wav"
+    },
+    {
+      "id": 7,
+      "start": 25.24,
+      "end": 28.18,
+      "duration": 2.94,
+      "text": "精霊の力を与えよう",
+      "japanese_path": "work/japanese_segments/seg_007_jp.wav"
+    },
+    {
+      "id": 8,
+      "start": 30.0,
+      "end": 32.0,
+      "duration": 2.0,
+      "text": "ん",
+      "japanese_path": "work/japanese_segments/seg_008_jp.wav"
+    },
+    {
+      "id": 9,
+      "start": 45.54,
+      "end": 52.84,
+      "duration": 7.3,
+      "text": "家 待機を漂うマナに精霊のステータスや真の名前までが",
+      "japanese_path": "work/japanese_segments/seg_009_jp.wav"
+    },
+    {
+      "id": 10,
+      "start": 53.945,
+      "end": 54.84,
+      "duration": 0.895,
+      "text": "ありがとうございました",
+      "japanese_path": "work/japanese_segments/seg_010_jp.wav"
+    },
+    {
+      "id": 11,
+      "start": 60.0,
+      "end": 61.0,
+      "duration": 1.0,
+      "text": "くっ",
+      "japanese_path": "work/japanese_segments/seg_011_jp.wav"
+    },
+    {
+      "id": 12,
+      "start": 63.244,
+      "end": 64.0,
+      "duration": 0.756,
+      "text": "人間ども",
+      "japanese_path": "work/japanese_segments/seg_012_jp.wav"
+    },
+    {
+      "id": 13,
+      "start": 65.0,
+      "end": 67.0,
+      "duration": 2.0,
+      "text": "貴様らは死の大地まで",
+      "japanese_path": "work/japanese_segments/seg_013_jp.wav"
+    },
+    {
+      "id": 14,
+      "start": 67.0,
+      "end": 71.0,
+      "duration": 4.0,
+      "text": "最後に残った我らの安息の地まで奪おうとするのか",
+      "japanese_path": "work/japanese_segments/seg_014_jp.wav"
+    },
+    {
+      "id": 15,
+      "start": 72.0,
+      "end": 73.0,
+      "duration": 1.0,
+      "text": "ブレッド 砲撃を",
+      "japanese_path": "work/japanese_segments/seg_015_jp.wav"
+    },
+    {
+      "id": 16,
+      "start": 74.0,
+      "end": 75.0,
+      "duration": 1.0,
+      "text": "おう",
+      "japanese_path": "work/japanese_segments/seg_016_jp.wav"
+    },
+    {
+      "id": 17,
+      "start": 90.297,
+      "end": 92.0,
+      "duration": 1.703,
+      "text": "第七回イマジチ",
+      "japanese_path": "work/japanese_segments/seg_017_jp.wav"
+    },
+    {
+      "id": 18,
+      "start": 93.0,
+      "end": 95.0,
+      "duration": 2.0,
+      "text": "ミョルニル",
+      "japanese_path": "work/japanese_segments/seg_018_jp.wav"
+    },
+    {
+      "id": 19,
+      "start": 105.0,
+      "end": 107.0,
+      "duration": 2.0,
+      "text": "とどめを",
+      "japanese_path": "work/japanese_segments/seg_019_jp.wav"
+    }
+  ]
+}

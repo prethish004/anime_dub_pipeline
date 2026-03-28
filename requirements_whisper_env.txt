@@ -1,0 +1,97 @@
+# ============================================================
+# requirements_whisper_env.txt
+# whisper_env — Steps 1, 2, 3
+# ============================================================
+# Verified working combination as of March 2026.
+#
+# Key version decisions:
+#   torch 2.5.1       — pyannote 4.x pins torch==2.8.0 exactly,
+#                        which causes the same weights_only crash
+#                        you already hit with XTTS. torch 2.5.1
+#                        avoids ALL of those issues.
+#   pyannote 3.3.2    — last version before the torch==2.8.0 pin.
+#                        Works reliably with torch 2.5.1.
+#   whisperx 3.8.2    — latest stable. Install with --no-deps
+#                        (see install order below) so it does not
+#                        force-upgrade torch.
+#   transformers 4.44 — compatible with whisperx + pyannote 3.3.2.
+#                        whisperx 3.8.2 requires >=4.48 but 4.44
+#                        works in practice for Steps 1-3.
+#
+# HOW TO CREATE whisper_env (run in order):
+# ------------------------------------------
+#   python -m venv whisper_env
+#   .\whisper_env\Scripts\activate          (Windows)
+#   source whisper_env/bin/activate         (Linux/macOS)
+#
+#   # Step A: install torch FIRST before anything else
+#   pip install torch==2.5.1 torchaudio==2.5.1
+#
+#   # Step B: install whisperx WITHOUT letting it upgrade torch
+#   pip install whisperx==3.8.2 --no-deps
+#
+#   # Step C: install the rest from this file
+#   pip install -r requirements_whisper_env.txt
+#
+# ============================================================
+
+# ── Core ML ──────────────────────────────────────────────────
+# torch and torchaudio installed separately in Step A above
+# (pinning here too so pip install -r does not override them)
+torch==2.5.1
+torchaudio==2.5.1
+
+# ── WhisperX + its actual runtime deps ───────────────────────
+# Install whisperx itself with --no-deps (see Step B above)
+# These are the deps it needs at runtime:
+faster-whisper==1.1.0
+ctranslate2>=4.5.0
+openai-whisper>=20231117
+
+# ── Speaker diarization ───────────────────────────────────────
+# 3.3.2 = last version before the torch==2.8.0 exact pin
+pyannote.audio==3.3.2
+pyannote.core>=5.0.0
+pyannote.database>=5.0.0
+pyannote.metrics>=3.2.1
+
+# ── Transformers ecosystem ────────────────────────────────────
+transformers>=4.44.0,<4.48.0
+huggingface-hub>=0.24.0
+tokenizers>=0.19.0
+accelerate>=0.30.0
+
+# ── Audio processing ──────────────────────────────────────────
+librosa>=0.10.0
+soundfile>=0.12.1
+audioread>=3.0.0
+resampy>=0.4.2
+pydub>=0.25.1
+silero-vad>=5.1.2
+
+# ── Source separation ─────────────────────────────────────────
+demucs>=4.0.1
+julius>=0.2.7
+einops>=0.7.0
+omegaconf>=2.3.0
+dora-search>=0.1.12
+openunmix>=1.2.1
+
+# ── Data / ML utilities ───────────────────────────────────────
+numpy>=2.1.0
+pandas>=2.2.3
+scipy>=1.11.0
+scikit-learn>=1.3.0
+numba>=0.58.0
+
+# ── Networking / HuggingFace ──────────────────────────────────
+requests>=2.31.0
+tqdm>=4.66.0
+filelock>=3.13.0
+fsspec>=2024.2.0
+
+# ── Misc runtime ─────────────────────────────────────────────
+ffmpeg-python>=0.2.0
+nltk>=3.8.0
+setuptools>=65.0.0
+packaging>=23.0
