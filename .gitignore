@@ -16,3 +16,9 @@ Thumbs.db
 pretrained_models/
 wav2vec2_models/
 wav2vec2_checkpoints/
+
+# Media & Temp files
+input/
+background_noise.wav
+error.log
+full_error.txt
