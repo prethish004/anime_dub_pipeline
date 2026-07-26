@@ -21,4 +21,11 @@ wav2vec2_checkpoints/
 input/
 background_noise.wav
 error.log
-full_error.txt
+full_error.txt
+
+# Web App build & media runtime folders
+web_app/frontend/node_modules/
+web_app/frontend/dist/
+web_app/uploads/
+web_app/sessions/
+
