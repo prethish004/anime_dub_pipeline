@@ -54,8 +54,13 @@ def run_step5(options: dict) -> bool:
 
     total_dur = 0.0
     try:
-        info = torchaudio.info(str(video_in))
-        total_dur = info.num_frames / info.sample_rate
+        import subprocess
+        probe = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", str(video_in)],
+            capture_output=True, text=True,
+        )
+        total_dur = float(probe.stdout.strip())
     except Exception:
         total_dur = max(s["end"] for s in trans_segs) + 2.0
 

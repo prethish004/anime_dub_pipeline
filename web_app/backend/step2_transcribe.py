@@ -13,10 +13,12 @@ import librosa
 import numpy as np
 from pathlib import Path
 from datetime import datetime
+from dotenv import load_dotenv
 from transformers import pipeline
 from pyannote.audio import Pipeline
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+load_dotenv(PROJECT_ROOT / ".env")
 
 def run_step2(options: dict) -> bool:
     print("=" * 60)
@@ -46,7 +48,7 @@ def run_step2(options: dict) -> bool:
     speaker_dir = os.path.join(work_dir, "speaker_segments")
     os.makedirs(speaker_dir, exist_ok=True)
 
-    hf_token = options.get("hf_token", "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")
+    hf_token = options.get("hf_token") or os.environ.get("HF_TOKEN")
 
     print("🔄 Loading ML models (PyAnnote, Whisper Turbo, Wav2Vec2 Gender)...")
     device_idx = 0 if torch.cuda.is_available() else -1
@@ -90,10 +92,11 @@ def run_step2(options: dict) -> bool:
     waveform, sample_rate = torchaudio.load(vocals_path)
 
     print("\n👥 1. Running speaker diarization...")
-    diarization = diarization_pipeline({
+    diarization_result = diarization_pipeline({
         "waveform": waveform,
         "sample_rate": sample_rate
     })
+    diarization = getattr(diarization_result, "speaker_diarization", diarization_result)
 
     speakers = set()
     segments = []

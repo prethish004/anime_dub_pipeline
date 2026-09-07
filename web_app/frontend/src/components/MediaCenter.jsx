@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Film, Download, RefreshCw } from 'lucide-react';
+import { Film, Download, RefreshCw, FileVideo } from 'lucide-react';
 import { getOutputs } from '../services/api';
 
 export function MediaCenter() {
@@ -18,6 +18,8 @@ export function MediaCenter() {
     fetchOutputList();
   }, []);
 
+  const videoOutput = outputs.find((f) => f.filename.toLowerCase().endsWith('.mp4'));
+
   return (
     <div className="glass-card">
       <div className="card-title">
@@ -30,11 +32,19 @@ export function MediaCenter() {
         </button>
       </div>
 
-      <div className="media-preview-container">
-        <video controls src="/work/output/anime_dubbed_final.mp4">
-          Dubbed video preview will appear here upon Step 5 completion.
-        </video>
-      </div>
+      {videoOutput ? (
+        <div className="media-preview-container">
+          <video controls src={videoOutput.url}>
+            Your browser does not support video playback.
+          </video>
+        </div>
+      ) : (
+        <div className="media-empty-state">
+          <FileVideo size={28} />
+          <p>No dubbed video yet</p>
+          <span>Run Step 5 (Assembly &amp; Muxing) to generate one</span>
+        </div>
+      )}
 
       <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
         {outputs.length === 0 ? (

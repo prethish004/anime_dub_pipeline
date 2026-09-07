@@ -259,6 +259,11 @@ async def get_outputs():
     return {"files": files}
 
 
+# Serves files copied from frontend/public/ (e.g. logo.png) at the site root.
+# Registered last so it only catches paths no route/mount above already claimed.
+app.mount("/", StaticFiles(directory=FRONTEND_DIST), name="frontend_public")
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("web_app.backend.app:app", host="0.0.0.0", port=8000, reload=True)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Square, Film, FolderGit2 } from 'lucide-react';
+import { Play, Square, FolderGit2 } from 'lucide-react';
 
 export function Navbar({ statusState, sessions, activeSession, onSelectSession, onRunAll, onCancel }) {
   const { status, current_step, is_running } = statusState;
@@ -8,7 +8,7 @@ export function Navbar({ statusState, sessions, activeSession, onSelectSession, 
     <header className="navbar">
       <div className="brand">
         <div className="brand-icon">
-          <Film style={{ color: '#fff' }} size={24} />
+          <img src="/logo.png" alt="" width={28} height={28} />
         </div>
         <div className="brand-title">
           <h1>AI Anime Dubbing Studio</h1>

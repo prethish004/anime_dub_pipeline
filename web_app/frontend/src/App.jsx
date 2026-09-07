@@ -93,13 +93,17 @@ export default function App() {
       <Stepper
         currentStep={statusState.current_step}
         onRunStep={handleRunStep}
+        isRunning={statusState.is_running}
       />
 
       {/* Main Grid */}
       <div className="dashboard-grid">
         {/* Left Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <VideoWorkspace onUploadSuccess={async () => { await loadSessionsData(); await loadData(); }} />
+          <VideoWorkspace
+            videoUrl={statusState.video_url}
+            onUploadSuccess={async () => { await loadSessionsData(); await loadData(); }}
+          />
           <VoiceStudio profiles={transcriptionData?.profiles} />
           <TranslationEditor
             translations={transcriptionData?.translations}

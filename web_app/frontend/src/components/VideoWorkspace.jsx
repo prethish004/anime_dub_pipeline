@@ -1,24 +1,26 @@
-import React, { useRef } from 'react';
-import { Upload, Video } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Upload, Video, FileVideo } from 'lucide-react';
 import { uploadVideo } from '../services/api';
 
-export function VideoWorkspace({ onUploadSuccess }) {
+export function VideoWorkspace({ videoUrl, onUploadSuccess }) {
   const fileInputRef = useRef(null);
-  const videoRef = useRef(null);
+  const [optimisticUrl, setOptimisticUrl] = useState(null);
 
   const handleFileChange = async (e) => {
     if (!e.target.files || !e.target.files[0]) return;
     const file = e.target.files[0];
     try {
-      await uploadVideo(file);
-      if (videoRef.current) {
-        videoRef.current.src = '/input/anime.mp4?t=' + Date.now();
+      const result = await uploadVideo(file);
+      if (result && result.file) {
+        setOptimisticUrl('/' + result.file + '?t=' + Date.now());
       }
       if (onUploadSuccess) onUploadSuccess(file.name);
     } catch (err) {
       alert('Upload failed: ' + err.message);
     }
   };
+
+  const src = optimisticUrl || videoUrl;
 
   return (
     <div className="glass-card">
@@ -42,11 +44,19 @@ export function VideoWorkspace({ onUploadSuccess }) {
         </button>
       </div>
 
-      <div className="media-preview-container">
-        <video ref={videoRef} controls src="/input/anime.mp4">
-          Your browser does not support video playback.
-        </video>
-      </div>
+      {src ? (
+        <div className="media-preview-container">
+          <video controls src={src}>
+            Your browser does not support video playback.
+          </video>
+        </div>
+      ) : (
+        <div className="media-empty-state">
+          <FileVideo size={28} />
+          <p>No video uploaded for this session yet</p>
+          <span>Click "Upload New Video" to get started</span>
+        </div>
+      )}
     </div>
   );
 }

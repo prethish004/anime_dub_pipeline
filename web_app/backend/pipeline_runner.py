@@ -117,6 +117,15 @@ class PipelineRunner:
         # 3. Fallback to input/anime.mp4
         return os.path.join(PROJECT_ROOT, "input", "anime.mp4")
 
+    def get_session_video_url(self) -> Optional[str]:
+        """URL for the active session's own uploaded video, or None if it hasn't
+        uploaded one yet. Unlike get_session_video_file(), this never falls back
+        to another session's upload or the legacy input/anime.mp4 default."""
+        up_v = os.path.join(PROJECT_ROOT, "web_app", "uploads", f"{self.active_session_name}.mp4")
+        if os.path.exists(up_v):
+            return f"/web_app/uploads/{self.active_session_name}.mp4"
+        return None
+
     def get_state(self) -> Dict:
         return {
             "status": self.status,
@@ -126,7 +135,8 @@ class PipelineRunner:
             "is_running": self.status == "running",
             "active_session": self.active_session_name,
             "work_dir": self.get_session_work_dir(),
-            "video_file": self.get_session_video_file()
+            "video_file": self.get_session_video_file(),
+            "video_url": self.get_session_video_url()
         }
 
     def start_step(self, step_name: str, options: Optional[Dict] = None):

@@ -90,14 +90,14 @@ def run_step3(options: dict) -> bool:
     try:
         emotion_pipe = pipeline(
             "audio-classification",
-            model="ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition",
+            model="superb/wav2vec2-base-superb-er",
             device=device_idx
         )
     except Exception as e:
         print(f"  ⚠️ Primary emotion model failed: {e}. Trying fallback...")
         emotion_pipe = pipeline(
             "audio-classification",
-            model="superb/wav2vec2-base-superb-er",
+            model="ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition",
             device=device_idx
         )
 
@@ -169,11 +169,16 @@ Rules:
             )
             raw_res = response.choices[0].message.content
             parsed = json.loads(raw_res)
-            batch_outputs = parsed.get("segments", parsed.get("translations", parsed))
-            if isinstance(batch_outputs, dict):
-                batch_outputs = list(batch_outputs.values())
 
-            output_by_id = {b.get("segment_id", i): b for i, b in enumerate(batch_outputs)}
+            if isinstance(parsed, list):
+                batch_outputs = parsed
+            elif "segment_id" in parsed:
+                batch_outputs = [parsed]
+            else:
+                list_values = [v for v in parsed.values() if isinstance(v, list)]
+                batch_outputs = list_values[0] if list_values else []
+
+            output_by_id = {b.get("segment_id", i): b for i, b in enumerate(batch_outputs) if isinstance(b, dict)}
 
             for s in batch:
                 out_item = output_by_id.get(s['id'], {})

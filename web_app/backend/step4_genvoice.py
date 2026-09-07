@@ -7,15 +7,35 @@ Modular Backend Step 4 Gen: XTTS-v2 / MMS-TTS + kNN-VC Synthesis, Rubberband Ali
 import os
 import sys
 import json
+import subprocess
 import torch
 import torchaudio
 import librosa
-import pyrubberband as pyrb
 import numpy as np
 from pathlib import Path
 from datetime import datetime
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+def _ffmpeg_time_stretch(in_path: str, rate: float, sr: int):
+    """Time-stretch a WAV file using ffmpeg's built-in rubberband filter.
+    Avoids depending on the standalone rubberband CLI binary, which isn't
+    installed on this machine. Returns a numpy array, or None on failure."""
+    tmp_out = in_path + ".stretch_tmp.wav"
+    try:
+        result = subprocess.run(
+            ["ffmpeg", "-y", "-i", in_path, "-af", f"rubberband=tempo={rate}", tmp_out],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0 or not os.path.exists(tmp_out):
+            return None
+        y, _ = librosa.load(tmp_out, sr=sr)
+        return y
+    except Exception:
+        return None
+    finally:
+        if os.path.exists(tmp_out):
+            os.remove(tmp_out)
 
 def run_step4_genvoice(options: dict) -> bool:
     print("=" * 60)
@@ -61,6 +81,9 @@ def run_step4_genvoice(options: dict) -> bool:
     mms_pipe = None
 
     if lang_mode == "english":
+        import transformers.pytorch_utils as _pt_utils
+        if not hasattr(_pt_utils, "isin_mps_friendly"):
+            _pt_utils.isin_mps_friendly = lambda elements, test_elements: torch.isin(elements, test_elements)
         from TTS.api import TTS
         model_name = "tts_models/multilingual/multi-dataset/xtts_v2"
         tts_api = TTS(model_name=model_name, progress_bar=False)
@@ -138,10 +161,8 @@ def run_step4_genvoice(options: dict) -> bool:
         if curr_dur > 0 and target_dur > 0:
             rate = curr_dur / target_dur
             rate = max(0.5, min(2.5, rate))
-            try:
-                aligned_y = pyrb.time_stretch(raw_y, sr_curr, rate)
-            except Exception:
-                aligned_y = raw_y
+            stretched = _ffmpeg_time_stretch(raw_out, rate, sr_curr)
+            aligned_y = stretched if stretched is not None else raw_y
         else:
             aligned_y = raw_y
 

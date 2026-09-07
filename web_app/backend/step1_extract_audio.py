@@ -9,6 +9,7 @@ import sys
 import json
 import torch
 import torchaudio
+import soundfile as sf
 from pathlib import Path
 from datetime import datetime
 
@@ -60,9 +61,9 @@ def run_step1(options: dict) -> bool:
         print(f"❌ ffmpeg failed: {result.stderr[-500:]}")
         return False
 
-    info = torchaudio.info(raw_audio)
-    raw_duration_s = info.num_frames / info.sample_rate
-    print(f"  ✓ Raw audio extracted: {raw_audio} ({raw_duration_s:.2f}s, {info.sample_rate}Hz)")
+    info = sf.info(raw_audio)
+    raw_duration_s = info.frames / info.samplerate
+    print(f"  ✓ Raw audio extracted: {raw_audio} ({raw_duration_s:.2f}s, {info.samplerate}Hz)")
 
     model_name = "htdemucs" if not torch.cuda.is_available() else "htdemucs_6s"
     print(f"\n🎼 2. Demucs {model_name} source separation...")
