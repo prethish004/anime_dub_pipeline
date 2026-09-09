@@ -34,6 +34,56 @@
   --transition-normal: all 0.18s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Light theme — overrides the same tokens; every component already reads
+   colors through these variables, so nothing else needs to change.
+   The Live Execution Logs terminal is deliberately excluded and always
+   stays dark, the way most real terminals do regardless of app theme. */
+[data-theme="light"] {
+  --bg-dark: oklch(0.975 0.004 250);
+  --bg-gradient: var(--bg-dark);
+
+  --glass-bg: oklch(0.995 0.002 250);
+  --glass-bg-hover: oklch(0.94 0.006 250);
+  --glass-border: oklch(0.85 0.008 250);
+  --glass-border-accent: oklch(0.5 0.13 196 / 0.4);
+  --surface-sunken: oklch(0.93 0.006 250);
+
+  --accent-cyan: oklch(0.5 0.13 196);
+  --accent-violet: oklch(0.48 0.17 300);
+  --accent-pink: oklch(0.5 0.19 16);
+  --accent-green: oklch(0.45 0.14 148);
+  --accent-amber: oklch(0.5 0.15 75);
+
+  --text-primary: oklch(0.2 0.015 250);
+  --text-secondary: oklch(0.42 0.015 250);
+  --text-muted: oklch(0.58 0.015 250);
+
+  --shadow-glow-cyan: 0 0 0 1px oklch(0.5 0.13 196 / 0.35), 0 2px 10px -3px oklch(0.5 0.13 196 / 0.3);
+  --shadow-glow-violet: 0 0 0 1px oklch(0.48 0.17 300 / 0.3), 0 2px 10px -3px oklch(0.48 0.17 300 / 0.28);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+.theme-toggle:hover {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 1px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,14 +143,10 @@ body {
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
-  background: var(--surface-sunken);
-  border: 1px solid var(--glass-border-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-title h1 {
@@ -814,4 +860,56 @@ body {
 .media-empty-state span {
   font-family: var(--font-mono);
   font-size: 11px;
+}
+
+/* Waveform comparison gallery */
+.waveform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.waveform-thumb {
+  display: block;
+  background: var(--surface-sunken);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  text-decoration: none;
+  transition: var(--transition-normal);
+}
+.waveform-thumb:hover {
+  border-color: var(--accent-violet);
+}
+.waveform-thumb img {
+  width: 100%;
+  display: block;
+  background: #0a0a10;
+}
+.waveform-thumb span {
+  display: block;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Speaker gender-confirmation screenshots */
+.speaker-screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 6px;
+  margin-top: 4px;
+}
+.speaker-screenshots a {
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  aspect-ratio: 1 / 1;
+}
+.speaker-screenshots img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

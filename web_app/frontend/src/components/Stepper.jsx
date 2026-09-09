@@ -88,14 +88,27 @@ function VerifyGuide({ onClose }) {
   );
 }
 
-export function Stepper({ currentStep, onRunStep, isRunning }) {
+export function Stepper({ currentStep, onRunStep, isRunning, stepProgress }) {
   const { logs } = useSSELogs();
   const [showGuide, setShowGuide] = useState(false);
   const [tick, setTick] = useState(0);
   const runStartRef = useRef(null);
   const wasRunningRef = useRef(false);
 
-  const stepStates = useMemo(() => deriveStepStates(logs), [logs]);
+  const stepStates = useMemo(() => {
+    const derived = deriveStepStates(logs);
+    // A step whose real output file exists on disk is durably 'ok', no
+    // matter what the (window-limited) live log stream currently shows —
+    // this is what keeps a finished step looking finished after a refresh.
+    if (stepProgress) {
+      for (const id of Object.keys(derived)) {
+        if (stepProgress[id]) {
+          derived[id] = { ...derived[id], status: 'ok' };
+        }
+      }
+    }
+    return derived;
+  }, [logs, stepProgress]);
 
   const completed = STEPS.filter((s) => stepStates[s.id].status === 'ok').length;
   const hasError = STEPS.some((s) => stepStates[s.id].status === 'error');

@@ -6,6 +6,7 @@ import { VoiceStudio } from './components/VoiceStudio';
 import { TranslationEditor } from './components/TranslationEditor';
 import { TerminalConsole } from './components/TerminalConsole';
 import { MediaCenter } from './components/MediaCenter';
+import { WaveformGallery } from './components/WaveformGallery';
 
 import { usePipelineStatus } from './hooks/usePipelineStatus';
 import { runStep, cancelPipeline, getTranscription, getSessions, selectSession } from './services/api';
@@ -15,6 +16,24 @@ export default function App() {
   const [transcriptionData, setTranscriptionData] = useState(null);
   const [sessions, setSessions] = useState([]);
   const [activeSession, setActiveSession] = useState('default');
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('theme') || 'dark';
+    } catch (e) {
+      return 'dark';
+    }
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {
+      // localStorage unavailable (private browsing, etc.) — theme just won't persist
+    }
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   const loadSessionsData = async () => {
     try {
@@ -87,6 +106,8 @@ export default function App() {
         onSelectSession={handleSelectSession}
         onRunAll={handleRunAll}
         onCancel={handleCancel}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Stepper */}
@@ -94,6 +115,7 @@ export default function App() {
         currentStep={statusState.current_step}
         onRunStep={handleRunStep}
         isRunning={statusState.is_running}
+        stepProgress={statusState.step_progress}
       />
 
       {/* Main Grid */}
@@ -117,6 +139,9 @@ export default function App() {
           <MediaCenter />
         </div>
       </div>
+
+      {/* Waveform Comparisons — shown last, at the very bottom */}
+      <WaveformGallery />
     </div>
   );
 }

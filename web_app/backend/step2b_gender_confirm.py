@@ -74,11 +74,26 @@ def run_step2b(options: dict) -> bool:
             blur = calculate_blur(frame)
             brightness = calculate_brightness(frame)
 
-            if blur > 50.0 and brightness > 30.0:
+            # Threshold was 50.0, tuned for live-action video. Anime's flatter
+            # shading naturally scores much lower on this metric — measured
+            # 8-39 on real, perfectly sharp anime frames — so 50.0 rejected
+            # every single frame regardless of source video. 5.0 stays well
+            # below that observed range while still filtering truly blank
+            # (near-zero-variance) frames.
+            if blur > 5.0 and brightness > 30.0:
                 fn = f"seg{seg['id']:03d}_{mid_t:.1f}s.png"
                 out_p = os.path.join(spk_dir, fn)
-                cv2.imwrite(out_p, frame)
-                screenshots.append(os.path.relpath(out_p, str(PROJECT_ROOT)).replace("\\", "/"))
+                # cv2.imwrite() silently fails on Windows (returns False, no
+                # exception) whenever the path contains non-ASCII characters
+                # — common here since session/video names come straight from
+                # uploaded filenames (em-dashes, ellipses, etc. from titles
+                # like this one). Encode in memory and write via Python's own
+                # file I/O instead, which handles Unicode paths correctly.
+                ok, buf = cv2.imencode(".png", frame)
+                if ok:
+                    with open(out_p, "wb") as img_f:
+                        img_f.write(buf.tobytes())
+                    screenshots.append(os.path.relpath(out_p, str(PROJECT_ROOT)).replace("\\", "/"))
 
         profiles[speaker]["screenshots"] = screenshots
         print(f"  ✓ {speaker}: Saved {len(screenshots)} screenshots")

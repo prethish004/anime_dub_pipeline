@@ -83,3 +83,8 @@ export async function getOutputs() {
   const res = await fetch('/api/outputs');
   return res.json();
 }
+
+export async function getWaveformComparisons() {
+  const res = await fetch('/api/waveform_comparisons');
+  return res.json();
+}

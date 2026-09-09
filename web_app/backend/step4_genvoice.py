@@ -12,10 +12,42 @@ import torch
 import torchaudio
 import librosa
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 from pathlib import Path
 from datetime import datetime
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+def _save_waveform_comparison(raw_y, aligned_y, sr, sid, target_dur, plot_dir):
+    """Saves a before/after waveform plot for one synthesized segment,
+    comparing the raw XTTS output against the rubberband-timed version
+    that was actually stretched/trimmed to fit the segment's lip-sync
+    duration budget. Never raises — a missing plot isn't worth failing
+    the whole synthesis step over."""
+    try:
+        fig, axes = plt.subplots(2, 1, figsize=(8, 3.6), sharex=False)
+        t_raw = np.arange(len(raw_y)) / sr
+        axes[0].plot(t_raw, raw_y, linewidth=0.6, color="#4fe3ff")
+        axes[0].set_title(f"Segment {sid:03d} — raw synthesis ({len(raw_y) / sr:.2f}s)", fontsize=9)
+        axes[0].set_xlim(0, max(t_raw[-1] if len(t_raw) else 0, target_dur))
+
+        t_aligned = np.arange(len(aligned_y)) / sr
+        axes[1].plot(t_aligned, aligned_y, linewidth=0.6, color="#a374ff")
+        axes[1].axvline(target_dur, color="#ff5fae", linewidth=0.8, linestyle="--")
+        axes[1].set_title(f"Segment {sid:03d} — aligned to {target_dur:.2f}s target", fontsize=9)
+        axes[1].set_xlim(0, max(t_aligned[-1] if len(t_aligned) else 0, target_dur))
+
+        for ax in axes:
+            ax.set_ylim(-1.05, 1.05)
+            ax.tick_params(labelsize=7)
+        fig.tight_layout()
+        fig.savefig(os.path.join(plot_dir, f"seg{sid:03d}.png"), dpi=110)
+    except Exception as e:
+        print(f"  ⚠️ Could not save waveform comparison for segment {sid}: {e}")
+    finally:
+        plt.close("all")
 
 def _ffmpeg_time_stretch(in_path: str, rate: float, sr: int):
     """Time-stretch a WAV file using ffmpeg's built-in rubberband filter.
@@ -173,6 +205,7 @@ def run_step4_genvoice(options: dict) -> bool:
             aligned_y = np.pad(aligned_y, (0, target_samples - len(aligned_y)))
 
         torchaudio.save(aligned_out, torch.tensor(aligned_y).unsqueeze(0), sr_curr)
+        _save_waveform_comparison(raw_y, aligned_y, sr_curr, sid, target_dur, plot_dir)
 
         peak = np.max(np.abs(aligned_y))
         if peak > 0:

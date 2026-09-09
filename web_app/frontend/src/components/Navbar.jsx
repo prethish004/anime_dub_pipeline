@@ -1,15 +1,12 @@
 import React from 'react';
-import { Play, Square, FolderGit2 } from 'lucide-react';
+import { Play, Square, FolderGit2, Sun, Moon } from 'lucide-react';
 
-export function Navbar({ statusState, sessions, activeSession, onSelectSession, onRunAll, onCancel }) {
+export function Navbar({ statusState, sessions, activeSession, onSelectSession, onRunAll, onCancel, theme, onToggleTheme }) {
   const { status, current_step, is_running } = statusState;
 
   return (
     <header className="navbar">
       <div className="brand">
-        <div className="brand-icon">
-          <img src="/logo.png" alt="" width={28} height={28} />
-        </div>
         <div className="brand-title">
           <h1>AI Anime Dubbing Studio</h1>
           <p>Multi-Speaker Voice Cloning & ADR Pipeline (React)</p>
@@ -54,6 +51,15 @@ export function Navbar({ statusState, sessions, activeSession, onSelectSession, 
           onClick={onRunAll}
         >
           <Play size={16} /> Run Full Dubbing Pipeline
+        </button>
+
+        <button
+          className="theme-toggle"
+          onClick={onToggleTheme}
+          aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+          title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+        >
+          {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
         </button>
       </div>
     </header>

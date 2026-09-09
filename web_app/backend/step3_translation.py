@@ -142,11 +142,11 @@ Rules:
 3. Output JSON array with segment_id, translated_text.
 """
 
-    translated_segments = []
-    batch_size = 10
-
-    for idx in range(0, len(segments), batch_size):
-        batch = segments[idx:idx + batch_size]
+    def translate_batch(batch):
+        """Attempts to translate a batch of segments in a single GPT call.
+        Returns {segment_id: translated_text}. Raises on any failure
+        (malformed JSON, missing segment, API error, etc.) so the caller
+        can retry at a smaller batch size instead of giving up."""
         prompt_lines = []
         for s in batch:
             emo_info = emo_by_id.get(s['id'], {})
@@ -155,69 +155,83 @@ Rules:
                 f"ID: {s['id']} | Speaker: {s['speaker']} | Duration: {s['duration']}s | Emotion: {emo_info.get('emotion','neutral')} | Style: {style}\n"
                 f"JP Text: {s['text']}\n"
             )
-
         prompt_str = "\n".join(prompt_lines)
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt_str}
+            ],
+            temperature=0.7,
+            response_format={"type": "json_object"}
+        )
+        raw_res = response.choices[0].message.content
+        parsed = json.loads(raw_res)
+
+        if isinstance(parsed, list):
+            batch_outputs = parsed
+        elif "segment_id" in parsed:
+            batch_outputs = [parsed]
+        else:
+            list_values = [v for v in parsed.values() if isinstance(v, list)]
+            batch_outputs = list_values[0] if list_values else []
+
+        output_by_id = {b.get("segment_id", i): b for i, b in enumerate(batch_outputs) if isinstance(b, dict)}
+
+        result = {}
+        for s in batch:
+            out_item = output_by_id.get(s['id'])
+            if not out_item or "translated_text" not in out_item:
+                raise ValueError(f"no translation returned for segment {s['id']}")
+            result[s['id']] = out_item["translated_text"]
+        return result
+
+    def translate_with_retry(batch):
+        """Translates a batch, halving it and retrying (down to one
+        segment at a time) whenever a call fails — e.g. GPT truncating its
+        JSON output for a large batch. A segment only falls back to its
+        original Japanese text if it still fails completely alone, so one
+        bad response no longer costs an entire 10-segment batch."""
         try:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt_str}
-                ],
-                temperature=0.7,
-                response_format={"type": "json_object"}
-            )
-            raw_res = response.choices[0].message.content
-            parsed = json.loads(raw_res)
-
-            if isinstance(parsed, list):
-                batch_outputs = parsed
-            elif "segment_id" in parsed:
-                batch_outputs = [parsed]
-            else:
-                list_values = [v for v in parsed.values() if isinstance(v, list)]
-                batch_outputs = list_values[0] if list_values else []
-
-            output_by_id = {b.get("segment_id", i): b for i, b in enumerate(batch_outputs) if isinstance(b, dict)}
-
-            for s in batch:
-                out_item = output_by_id.get(s['id'], {})
-                translated_text = out_item.get("translated_text", s['text'])
-                emo_info = emo_by_id.get(s['id'], {})
-                style = detect_dialogue_style(s['text'])
-
-                translated_segments.append({
-                    "segment_id": s['id'],
-                    "start": s['start'],
-                    "end": s['end'],
-                    "duration": s['duration'],
-                    "speaker": s['speaker'],
-                    "japanese_text": s['text'],
-                    "translated_text": translated_text,
-                    "language_mode": lang_mode,
-                    "emotion": emo_info.get("emotion", "neutral"),
-                    "emotion_confidence": emo_info.get("confidence", 1.0),
-                    "style": style,
-                    "words": s.get("words", [])
-                })
-
+            return translate_batch(batch)
         except Exception as e:
-            print(f"  ❌ GPT call error on batch {idx}: {e}")
-            for s in batch:
-                translated_segments.append({
-                    "segment_id": s['id'],
-                    "start": s['start'],
-                    "end": s['end'],
-                    "duration": s['duration'],
-                    "speaker": s['speaker'],
-                    "japanese_text": s['text'],
-                    "translated_text": s['text'],
-                    "language_mode": lang_mode,
-                    "emotion": "neutral",
-                    "emotion_confidence": 1.0,
-                    "style": "neutral",
-                    "words": s.get("words", [])
-                })
+            if len(batch) == 1:
+                seg_id = batch[0]['id']
+                print(f"  ❌ GPT translation failed for segment {seg_id}, keeping original text: {e}")
+                return {seg_id: batch[0]['text']}
+            mid = len(batch) // 2
+            print(f"  ⚠️ Batch of {len(batch)} failed ({e}); retrying as {mid} + {len(batch) - mid}...")
+            result = translate_with_retry(batch[:mid])
+            result.update(translate_with_retry(batch[mid:]))
+            return result
+
+    translated_segments = []
+    batch_size = 10
+
+    for idx in range(0, len(segments), batch_size):
+        batch = segments[idx:idx + batch_size]
+        output_by_id = translate_with_retry(batch)
+
+        for s in batch:
+            translated_text = output_by_id.get(s['id'], s['text'])
+            emo_info = emo_by_id.get(s['id'], {})
+            style = detect_dialogue_style(s['text'])
+
+            translated_segments.append({
+                "segment_id": s['id'],
+                "start": s['start'],
+                "end": s['end'],
+                "duration": s['duration'],
+                "speaker": s['speaker'],
+                "japanese_text": s['text'],
+                "translated_text": translated_text,
+                "language_mode": lang_mode,
+                "emotion": emo_info.get("emotion", "neutral"),
+                "emotion_confidence": emo_info.get("confidence", 1.0),
+                "style": style,
+                "words": s.get("words", [])
+            })
 
     final_payload = {
         "timestamp": datetime.now().isoformat(),

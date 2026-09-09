@@ -1,0 +1,5 @@
+demucs
+opencv-python
+fastapi
+uvicorn
+python-multipart

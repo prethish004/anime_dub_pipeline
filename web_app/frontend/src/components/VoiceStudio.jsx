@@ -83,6 +83,22 @@ export function VoiceStudio({ profiles }) {
                   <span className={`speaker-badge ${gender}`}>{gender}</span>
                 </div>
 
+                {/* Visual Gender Confirmation Screenshots (Step 2b) */}
+                {prof.screenshots && prof.screenshots.length > 0 && (
+                  <div>
+                    <label style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>
+                      Gender Confirmation Screenshots:
+                    </label>
+                    <div className="speaker-screenshots">
+                      {prof.screenshots.map((path) => (
+                        <a key={path} href={`/${path}`} target="_blank" rel="noopener noreferrer">
+                          <img src={`/${path}`} alt="" loading="lazy" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Original Speaker Segment Audio */}
                 {prof.audio_file && (
                   <div>

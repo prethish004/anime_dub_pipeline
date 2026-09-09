@@ -259,6 +259,20 @@ async def get_outputs():
     return {"files": files}
 
 
+@app.get("/api/waveform_comparisons")
+async def get_waveform_comparisons():
+    w_dir = runner.get_session_work_dir()
+    plot_dir = os.path.join(w_dir, "waveform_comparisons")
+    files = []
+    if os.path.exists(plot_dir):
+        for fn in sorted(os.listdir(plot_dir)):
+            fp = os.path.join(plot_dir, fn)
+            if os.path.isfile(fp) and fn.lower().endswith(".png"):
+                rel_url = os.path.relpath(fp, str(PROJECT_ROOT)).replace("\\", "/")
+                files.append({"filename": fn, "url": f"/{rel_url}"})
+    return {"files": files}
+
+
 # Serves files copied from frontend/public/ (e.g. logo.png) at the site root.
 # Registered last so it only catches paths no route/mount above already claimed.
 app.mount("/", StaticFiles(directory=FRONTEND_DIST), name="frontend_public")

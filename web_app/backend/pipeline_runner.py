@@ -126,6 +126,29 @@ class PipelineRunner:
             return f"/web_app/uploads/{self.active_session_name}.mp4"
         return None
 
+    def get_step_progress(self) -> Dict[str, bool]:
+        """Whether each pipeline step has completed for the active session,
+        determined by checking for that step's real output file on disk —
+        not the live log stream. This is what survives a browser refresh:
+        the log stream only seeds a new connection with the last 100 lines,
+        which easily scrolls past an earlier step's marker on any run of
+        normal length, making a finished step look 'pending' again after
+        reload. Checking the filesystem instead is unaffected by that."""
+        w_dir = self.get_session_work_dir()
+
+        def exists(*parts):
+            return os.path.exists(os.path.join(w_dir, *parts))
+
+        return {
+            "step1_extract_audio": exists("step1_metadata.json"),
+            "step2_transcribe_diarization": exists("transcription_with_speakers.json"),
+            "step2b_gender_confirm": exists("gender_screenshots"),
+            "step3_translation": exists("translated_segments_step3.json"),
+            "step4_setup": exists("speaker_config.json"),
+            "step4_genvoice_complete": exists("generated_audio", "generation_metadata.json"),
+            "step5_assembly": exists("output", "anime_dubbed_final.mp4"),
+        }
+
     def get_state(self) -> Dict:
         return {
             "status": self.status,
@@ -136,7 +159,8 @@ class PipelineRunner:
             "active_session": self.active_session_name,
             "work_dir": self.get_session_work_dir(),
             "video_file": self.get_session_video_file(),
-            "video_url": self.get_session_video_url()
+            "video_url": self.get_session_video_url(),
+            "step_progress": self.get_step_progress()
         }
 
     def start_step(self, step_name: str, options: Optional[Dict] = None):
