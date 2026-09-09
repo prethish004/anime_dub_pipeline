@@ -12,6 +12,8 @@ import torch
 import torchaudio
 import librosa
 import numpy as np
+from scipy.signal import lfilter
+from torch_pitch_shift import pitch_shift
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -19,6 +21,83 @@ from pathlib import Path
 from datetime import datetime
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+def _pitch_shift_np(y: np.ndarray, sr: int, semitones: float) -> np.ndarray:
+    """Pitch-shifts a 1D numpy array by `semitones` without changing its
+    duration (important — the caller has already time-aligned this clip
+    to its lip-sync budget)."""
+    t = torch.from_numpy(y.astype(np.float32)).unsqueeze(0).unsqueeze(0)
+    shifted = pitch_shift(t, semitones, sr)
+    return shifted.squeeze(0).squeeze(0).numpy()
+
+def _apply_age_transform(y: np.ndarray, sr: int, age_category: str) -> np.ndarray:
+    """Real pitch-based age transform — a genuine, audible DSP change tied
+    to the selected age preset, not a no-op copy. Never raises; falls back
+    to the untransformed clip on any DSP failure so a bad transform can't
+    take down the whole synthesis step."""
+    semitone_shift = {
+        "child_young": 5.0,
+        "child_teen": 3.0,
+        "adult": 0.0,
+        "old_60s": -2.0,
+        "old_80s": -4.0,
+        "robot": 0.0,
+    }.get(age_category, 0.0)
+
+    try:
+        out = y
+        if semitone_shift != 0.0:
+            out = _pitch_shift_np(out, sr, semitone_shift)
+
+        if age_category == "robot":
+            # Cheap, classic "robot voice": ring-modulate with a square-wave
+            # carrier, which flattens natural pitch/amplitude variation and
+            # adds a metallic quality.
+            t_axis = np.arange(len(out)) / sr
+            carrier = np.sign(np.sin(2 * np.pi * 45.0 * t_axis))
+            out = out * (0.5 + 0.5 * carrier)
+
+        return out.astype(np.float32)
+    except Exception as e:
+        print(f"  ⚠️ Age transform ({age_category}) failed: {e}. Using untransformed audio.")
+        return y
+
+def _apply_emotion_dsp(y: np.ndarray, sr: int, emotion: str) -> np.ndarray:
+    """Real DSP tied to the segment's classified emotion (pitch, gain, and
+    a simple brightness filter) — not a no-op copy. Never raises."""
+    # superb/wav2vec2-base-superb-er's short label codes.
+    pitch_semitones, gain_db, brightness = {
+        "ang": (1.5, 3.0, 0.6),    # angry: sharper, louder, brighter
+        "hap": (1.0, 1.5, 0.3),    # happy: slightly higher, brighter
+        "sad": (-1.5, -2.0, -0.5), # sad: lower, quieter, duller
+        "neu": (0.0, 0.0, 0.0),
+    }.get((emotion or "neu").lower(), (0.0, 0.0, 0.0))
+
+    try:
+        out = y
+        if pitch_semitones != 0.0:
+            out = _pitch_shift_np(out, sr, pitch_semitones)
+
+        if brightness > 0:
+            # Simple one-pole high-shelf: emphasize the signal's own
+            # high-frequency detail (difference from a lagged copy).
+            out = out + brightness * (out - lfilter([0.0, 1.0], [1.0], out))
+        elif brightness < 0:
+            # Dulling: light moving-average low-pass.
+            window = 5
+            kernel = np.ones(window) / window
+            out = np.convolve(out, kernel, mode="same")
+
+        if gain_db != 0.0:
+            out = out * (10 ** (gain_db / 20.0))
+            peak = np.max(np.abs(out))
+            if peak > 1.0:
+                out = out / peak
+
+        return out.astype(np.float32)
+    except Exception as e:
+        print(f"  ⚠️ Emotion DSP ({emotion}) failed: {e}. Using untransformed audio.")
+        return y
 
 def _save_waveform_comparison(raw_y, aligned_y, sr, sid, target_dur, plot_dir):
     """Saves a before/after waveform plot for one synthesized segment,
@@ -100,6 +179,10 @@ def run_step4_genvoice(options: dict) -> bool:
             cfg = json.load(f)
             speaker_config = cfg.get("speaker_configs", {})
             global_toggles = cfg.get("global_toggles", global_toggles)
+
+    if global_toggles.get("knnvc_transform"):
+        print("  ⚠️ kNN-VC voice conversion is enabled but not yet implemented — "
+              "this pass will use standard XTTS voice cloning only, without kNN-VC applied.")
 
     gen_dir = os.path.join(work_dir, "generated_audio")
     plot_dir = os.path.join(work_dir, "waveform_comparisons")
@@ -211,9 +294,29 @@ def run_step4_genvoice(options: dict) -> bool:
         if peak > 0:
             aligned_y = aligned_y * (10 ** (-3.0 / 20.0) / peak)
 
-        torchaudio.save(emotion_out, torch.tensor(aligned_y).unsqueeze(0), sr_curr)
-        torchaudio.save(age_out, torch.tensor(aligned_y).unsqueeze(0), sr_curr)
-        torchaudio.save(final_out, torch.tensor(aligned_y).unsqueeze(0), sr_curr)
+        emotion_label = seg.get("emotion", "neu")
+        age_category = spk_cfg.get("age_category", "adult")
+
+        if global_toggles.get("emotion_dsp"):
+            emotion_y = _apply_emotion_dsp(aligned_y, sr_curr, emotion_label)
+        else:
+            emotion_y = aligned_y
+        torchaudio.save(emotion_out, torch.tensor(emotion_y).unsqueeze(0), sr_curr)
+
+        if global_toggles.get("age_transform"):
+            age_y = _apply_age_transform(aligned_y, sr_curr, age_category)
+        else:
+            age_y = aligned_y
+        torchaudio.save(age_out, torch.tensor(age_y).unsqueeze(0), sr_curr)
+
+        # Final = both enabled transforms chained on top of the aligned
+        # clip (kNN-VC would apply here too once implemented).
+        final_y = aligned_y
+        if global_toggles.get("emotion_dsp"):
+            final_y = _apply_emotion_dsp(final_y, sr_curr, emotion_label)
+        if global_toggles.get("age_transform"):
+            final_y = _apply_age_transform(final_y, sr_curr, age_category)
+        torchaudio.save(final_out, torch.tensor(final_y).unsqueeze(0), sr_curr)
 
         clips_metadata.append({
             "segment_id": sid,

@@ -52,16 +52,16 @@ def main():
     # Launch browser thread
     threading.Thread(target=open_browser, daemon=True).start()
 
-    # Try FastAPI Uvicorn Server first
     try:
         import uvicorn
         from web_app.backend.app import app
-        uvicorn.run("web_app.backend.app:app", host="0.0.0.0", port=8000, reload=False)
     except Exception as e:
-        print(f"\n⚠️  FastAPI/Uvicorn launch failed ({e}).")
-        print("⚡ Switching to Pure Python Web Server (AppControl / WDAC Policy Safe)...")
-        from web_app.backend.app_pure import run_pure_server
-        run_pure_server(port=8000)
+        print(f"\n❌ FastAPI/Uvicorn launch failed: {e}")
+        print("   Install the required packages and try again:")
+        print("   pip install fastapi uvicorn python-multipart")
+        sys.exit(1)
+
+    uvicorn.run("web_app.backend.app:app", host="0.0.0.0", port=8000, reload=False)
 
 
 if __name__ == "__main__":
