@@ -88,3 +88,8 @@ export async function getWaveformComparisons() {
   const res = await fetch('/api/waveform_comparisons');
   return res.json();
 }
+
+export async function getStyleAccuracy(refresh = false) {
+  const res = await fetch(`/api/style_accuracy${refresh ? '?refresh=true' : ''}`);
+  return res.json();
+}

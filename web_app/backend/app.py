@@ -259,6 +259,15 @@ async def get_outputs():
     return {"files": files}
 
 
+@app.get("/api/style_accuracy")
+def get_style_accuracy(refresh: bool = False):
+    # Plain `def`, not `async def`: FastAPI runs sync routes in a threadpool,
+    # so loading the classifier on a cache miss (a few seconds) doesn't
+    # block the event loop / SSE log streaming for other requests.
+    import web_app.backend.style_eval as style_eval
+    return style_eval.get_report(force_refresh=refresh)
+
+
 @app.get("/api/waveform_comparisons")
 async def get_waveform_comparisons():
     w_dir = runner.get_session_work_dir()

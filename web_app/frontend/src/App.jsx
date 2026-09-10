@@ -7,6 +7,7 @@ import { TranslationEditor } from './components/TranslationEditor';
 import { TerminalConsole } from './components/TerminalConsole';
 import { MediaCenter } from './components/MediaCenter';
 import { WaveformGallery } from './components/WaveformGallery';
+import { StyleAccuracyPanel } from './components/StyleAccuracyPanel';
 
 import { usePipelineStatus } from './hooks/usePipelineStatus';
 import { runStep, cancelPipeline, getTranscription, getSessions, selectSession } from './services/api';
@@ -142,6 +143,9 @@ export default function App() {
 
       {/* Waveform Comparisons — shown last, at the very bottom */}
       <WaveformGallery />
+
+      {/* Style detection accuracy report — measured, not guessed */}
+      <StyleAccuracyPanel />
     </div>
   );
 }

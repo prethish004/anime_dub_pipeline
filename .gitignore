@@ -28,4 +28,5 @@ web_app/frontend/node_modules/
 web_app/frontend/dist/
 web_app/uploads/
 web_app/sessions/
+web_app/backend/style_eval_report_cache.json
 
