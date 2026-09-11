@@ -71,15 +71,23 @@ def run_step2(options: dict) -> bool:
     try:
         whisper_pipe = pipeline(
             "automatic-speech-recognition",
-            model="openai/whisper-small",
+            model="openai/whisper-large-v3-turbo",
             device=device_idx
         )
-    except Exception:
-        whisper_pipe = pipeline(
-            "automatic-speech-recognition",
-            model="openai/whisper-tiny",
-            device=device_idx
-        )
+    except Exception as e:
+        print(f"  ⚠️ whisper-large-v3-turbo failed to load: {e}. Falling back to whisper-small...")
+        try:
+            whisper_pipe = pipeline(
+                "automatic-speech-recognition",
+                model="openai/whisper-small",
+                device=device_idx
+            )
+        except Exception:
+            whisper_pipe = pipeline(
+                "automatic-speech-recognition",
+                model="openai/whisper-tiny",
+                device=device_idx
+            )
 
 
     gender_pipe = pipeline(
