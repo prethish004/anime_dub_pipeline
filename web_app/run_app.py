@@ -36,13 +36,13 @@ if anime_python.exists() and sys.executable.lower() != str(anime_python).lower()
 def open_browser():
     time.sleep(1.5)
     url = "http://localhost:8000"
-    print(f"\n🌐 Opening Web Application in browser: {url}")
+    print(f"\n[INFO] Opening Web Application in browser: {url}")
     webbrowser.open(url)
 
 
 def main():
     print("=" * 65)
-    print("🚀 STARTING AI ANIME DUBBING STUDIO WEB APP & BACKEND SERVER")
+    print("STARTING AI ANIME DUBBING STUDIO WEB APP & BACKEND SERVER")
     print("=" * 65)
     print(f"  Python Exec: {sys.executable}")
     print("  Server URL : http://localhost:8000")
@@ -56,7 +56,7 @@ def main():
         import uvicorn
         from web_app.backend.app import app
     except Exception as e:
-        print(f"\n❌ FastAPI/Uvicorn launch failed: {e}")
+        print(f"\n[ERROR] FastAPI/Uvicorn launch failed: {e}")
         print("   Install the required packages and try again:")
         print("   pip install fastapi uvicorn python-multipart")
         sys.exit(1)

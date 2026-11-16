@@ -12,7 +12,7 @@
 
 # # # # # # # # You'll need a HuggingFace token for pyannote
 # # # # # # # # Get it from: https://huggingface.co/settings/tokens
-# # # # # # # HF_TOKEN = "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"  # Replace with your actual token
+# # # # # # # HF_TOKEN = ""  # Replace with your actual token
 
 # # # # # # # def check_prerequisites():
 # # # # # # #     """Check if required files exist"""
@@ -233,7 +233,7 @@
 
 # # # # # # You'll need a HuggingFace token for pyannote
 # # # # # # Get it from: https://huggingface.co/settings/tokens
-# # # # # HF_TOKEN = "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"  # Replace with your actual token
+# # # # # HF_TOKEN = ""  # Replace with your actual token
 
 # # # # # def check_prerequisites():
 # # # # #     """Check if required files exist"""
@@ -723,7 +723,7 @@
 # # # OUTPUT_JSON = "work/transcription_with_speakers.json"
 
 # # # # HuggingFace token
-# # # HF_TOKEN = "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"
+# # # HF_TOKEN = ""
 
 # # # # Age/Gender model
 # # # AGE_GENDER_MODEL = "audeering/wav2vec2-large-robust-24-ft-age-gender"
@@ -1262,7 +1262,7 @@
 # # # # OUTPUT_JSON = "work/transcription_with_speakers.json"
 # # # # SPEAKER_AUDIO_DIR = "work/speaker_segments"  # 🆕 Individual speaker clips for OpenVoice
 
-# # # # HF_TOKEN = "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"
+# # # # HF_TOKEN = ""
 # # # # AGE_GENDER_MODEL = "audeering/wav2vec2-large-robust-24-ft-age-gender"
 
 # # # # # ═══════════════════════════════════════════════════════════════════════════════════════
@@ -1659,7 +1659,7 @@
 # # OUTPUT_JSON = "work/transcription_with_speakers.json"
 
 # # # HuggingFace token
-# # HF_TOKEN = "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"
+# # HF_TOKEN = ""
 
 # # # Models
 # # AGE_GENDER_MODEL = "audeering/wav2vec2-large-robust-24-ft-age-gender"

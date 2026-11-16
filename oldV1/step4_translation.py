@@ -10,7 +10,7 @@
 # # # # # # # OUTPUT_JSON = "work/translated_segments.json"
 
 # # # # # # # # OpenAI API Key
-# # # # # # # OPENAI_API_KEY = "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"  # Replace with your key
+# # # # # # # OPENAI_API_KEY = ""  # Replace with your key
 
 # # # # # # # # Translation settings
 # # # # # # # TARGET_LANGUAGE = "English"
@@ -253,7 +253,7 @@
 # # # # # # # # OUTPUT_JSON = "work/translated_segments.json"
 
 # # # # # # # # # Google Gemini API Key (FREE!)
-# # # # # # # # GEMINI_API_KEY = "AIzaSyDsh5rO_zdkYtfe52g_HoaDzqe0VL6VqHU"  # Replace with your key
+# # # # # # # # GEMINI_API_KEY = ""  # Replace with your key
 
 # # # # # # # # # Translation settings
 # # # # # # # # TARGET_LANGUAGE = "English"
@@ -267,7 +267,7 @@
 # # # # # # # #         print("   Please run step3_diarization_simple.py first")
 # # # # # # # #         return False
     
-# # # # # # # #     if GEMINI_API_KEY == "AIzaSyDsh5rO_zdkYtfe52g_HoaDzqe0VL6VqHU":
+# # # # # # # #     if not GEMINI_API_KEY:
 # # # # # # # #         print("❌ Gemini API key not set!")
 # # # # # # # #         print("\n📝 To get your FREE API key:")
 # # # # # # # #         print("   1. Go to: https://aistudio.google.com/app/apikey")
@@ -488,7 +488,7 @@
 # # # # # # OUTPUT_JSON = "work/translated_segments.json"
 
 # # # # # # # OpenAI API Key
-# # # # # # OPENAI_API_KEY = "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"
+# # # # # # OPENAI_API_KEY = ""
 
 # # # # # # # Translation settings
 # # # # # # TARGET_LANGUAGE = "English"
@@ -954,7 +954,7 @@
 # # # # # EMOTION_FILE = "work/emotion_detection.json"
 # # # # # OUTPUT_JSON = "work/translated_segments_interactive.json"
 # # # # # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# # # # # # OPENAI_API_KEY = "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"
+# # # # # # OPENAI_API_KEY = ""
 
 # # # # # # Translation settings
 # # # # # SOURCE_LANGUAGE = "Japanese"

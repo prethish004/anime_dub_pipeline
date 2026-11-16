@@ -202,7 +202,7 @@ To dub an anime video, execute the scripts in the following exact sequence:
 - **Input:** `work/stems/htdemucs_6s/raw_audio_44k/vocals.wav`
 - **What it does:**
   1. **Speaker Diarization:** Uses `pyannote/speaker-diarization-3.1` to detect speaker identity and start/end boundaries for every utterance (`SPEAKER_00`, `SPEAKER_01`, etc.).
-  2. **Whisper Transcription:** Transcribes Japanese speech per segment using `openai/whisper-large-v3-turbo` with word-level timestamps (`return_timestamps="word"`). Offset word timestamps are saved for precise speech-rate analysis.
+  2. **Whisper Transcription:** Transcribes Japanese speech per segment using `openai/whisper-small` with word-level timestamps (`return_timestamps="word"`). Offset word timestamps are saved for precise speech-rate analysis.
   3. **Audio Gender Recognition:** Classifies speaker gender using `alefiury/wav2vec2-large-xlsr-53-gender-recognition-librispeech` (`male` or `female`) with confidence scoring.
   4. **Per-Speaker Audio Aggregation:** Concatenates audio clips for each speaker and exports `work/speaker_segments/<SPEAKER_ID>.wav`.
   5. **Structured Outputs:** Exports comprehensive transcript and speaker profile metadata.

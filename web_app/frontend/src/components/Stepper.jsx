@@ -9,6 +9,9 @@ const STEPS = [
     label: '1. Extraction & Demucs',
     circle: '1',
     verify: false,
+    mode: 'offline',
+    modeLabel: '⚡ Local',
+    modeTooltip: '100% Offline processing using local FFmpeg and PyTorch Demucs.',
     note: 'Fully automated — just run it. Nothing to review before moving on.',
   },
   {
@@ -16,6 +19,9 @@ const STEPS = [
     label: '2. Diarization & ASR',
     circle: '2',
     verify: true,
+    mode: 'hybrid',
+    modeLabel: '🔄 HF Sync',
+    modeTooltip: 'HuggingFace Auth check on startup, then runs 100% offline.',
     note: 'Skim the detected speaker count and transcript for obvious mix-ups — everything downstream (translation, voices) builds on this.',
   },
   {
@@ -23,6 +29,9 @@ const STEPS = [
     label: '2b. Gender Check',
     circle: '2b',
     verify: false,
+    mode: 'offline',
+    modeLabel: '⚡ Local',
+    modeTooltip: '100% Offline frame extraction using OpenCV.',
     note: 'Currently non-functional (known issue: the blur filter rejects every frame, so it never saves screenshots) — nothing to verify here yet.',
   },
   {
@@ -30,6 +39,9 @@ const STEPS = [
     label: '3. Emotion & ADR',
     circle: '3',
     verify: true,
+    mode: 'online',
+    modeLabel: '🌐 Cloud API',
+    modeTooltip: 'Requires OpenAI API access. Runs offline if manually edited.',
     note: 'Read through the translated lines in the ADR editor and fix anything awkward — much cheaper to fix text now than to re-generate voice audio later.',
   },
   {
@@ -37,6 +49,9 @@ const STEPS = [
     label: '4a. Voice Casting',
     circle: '4a',
     verify: true,
+    mode: 'offline',
+    modeLabel: '⚡ Local',
+    modeTooltip: '100% Offline voice sample catalogue scanning.',
     note: 'Check the auto-assigned voice sample actually fits each character (age/gender/personality) in Voice Casting Studio before running the slow voice-gen step.',
   },
   {
@@ -44,6 +59,9 @@ const STEPS = [
     label: '4b. Voice Gen & Alignment',
     circle: '4b',
     verify: false,
+    mode: 'offline',
+    modeLabel: '⚡ Local',
+    modeTooltip: '100% Offline TTS voice synthesis & DSP alignment on GPU/CPU.',
     note: 'Fully automated once casting is approved — just run it. Worth a quick listen to the final output afterward, but no setup needed mid-run.',
   },
   {
@@ -51,6 +69,9 @@ const STEPS = [
     label: '5. Timeline & Muxing',
     circle: '5',
     verify: false,
+    mode: 'offline',
+    modeLabel: '⚡ Local',
+    modeTooltip: '100% Offline video and audio timeline muxing.',
     note: 'Fully automated — just run it. Watch the final video once it\'s done to confirm sync looks right.',
   },
 ];
@@ -73,9 +94,14 @@ function VerifyGuide({ onClose }) {
         <div className="verify-guide-body">
           {STEPS.map((step) => (
             <div className="verify-row" key={step.id}>
-              <span className={`verify-tag ${step.verify ? 'needed' : 'skip'}`}>
-                {step.verify ? 'Verify' : 'Just run'}
-              </span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <span className={`verify-tag ${step.verify ? 'needed' : 'skip'}`}>
+                  {step.verify ? 'Verify' : 'Just run'}
+                </span>
+                <span className={`stepper-mode-badge ${step.mode}`} style={{ fontSize: '8px', textAlign: 'center' }}>
+                  {step.modeLabel}
+                </span>
+              </div>
               <div>
                 <div className="verify-row-title">{step.label}</div>
                 <div className="verify-row-note">{step.note}</div>
@@ -174,6 +200,9 @@ export function Stepper({ currentStep, onRunStep, isRunning, stepProgress }) {
             >
               <div className="stepper-top-row">
                 <span className="stepper-circle">{step.circle}</span>
+                <span className={`stepper-mode-badge ${step.mode}`} title={step.modeTooltip}>
+                  {step.modeLabel}
+                </span>
                 {s.status === 'ok' ? (
                   <Check size={12} className="stepper-check" />
                 ) : s.status === 'error' ? (

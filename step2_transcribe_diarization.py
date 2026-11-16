@@ -23,7 +23,7 @@
 # os.makedirs(SPEAKER_DIR, exist_ok=True)
 
 # # 🔥 HuggingFace token (get free at huggingface.co/settings/tokens)
-# HF_TOKEN = "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"  # Replace with your token
+# HF_TOKEN = ""  # Replace with your token
 
 # # Load models
 # print("🔄 Loading models...")
@@ -37,7 +37,7 @@
 # # Whisper transcription
 # whisper_pipe = pipeline(
 #     "automatic-speech-recognition",
-#     model="openai/whisper-large-v3-turbo",
+#     model="openai/whisper-small",
 #     device=0 if torch.cuda.is_available() else -1
 # )
 
@@ -217,7 +217,7 @@ PROFILES_JSON = "work/speaker_profiles.json"
 
 os.makedirs(SPEAKER_DIR, exist_ok=True)
 
-HF_TOKEN = "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"
+HF_TOKEN = os.environ.get("HF_TOKEN", "")
 
 # Load models
 print("🔄 Loading models...")
@@ -229,7 +229,7 @@ diarization_pipeline = Pipeline.from_pretrained(
 
 whisper_pipe = pipeline(
     "automatic-speech-recognition",
-    model="openai/whisper-large-v3-turbo",
+    model="openai/whisper-small",
     device=0 if torch.cuda.is_available() else -1
 )
 

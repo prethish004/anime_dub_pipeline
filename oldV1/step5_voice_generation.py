@@ -10,7 +10,7 @@
 # # # OUTPUT_DIR = "work/voice_clips"
 
 # # # # ElevenLabs API Key
-# # # ELEVENLABS_API_KEY = "sk_13330e107d319d4f75ab5e197f48d174e10520e1e6713e19"  # Get from: https://elevenlabs.io
+# # # ELEVENLABS_API_KEY = ""  # Get from: https://elevenlabs.io
 
 # # # # Voice mapping based on speaker profiles
 # # # VOICE_LIBRARY = {
@@ -337,7 +337,7 @@
 # # OUTPUT_DIR = "work/voice_clips"
 
 # # # ElevenLabs API Key (REPLACE WITH YOUR KEY)
-# # ELEVENLABS_API_KEY = "sk_13330e107d319d4f75ab5e197f48d174e10520e1e6713e19"
+# # ELEVENLABS_API_KEY = ""
 
 # # # ═══════════════════════════════════════════════════════════════════════════════════════
 # # # EXPANDED VOICE LIBRARY - 10+ VOICES WITH AGE CATEGORIES
@@ -740,7 +740,7 @@
 # METADATA_OUTPUT = "work/voice_clips_metadata.json"
 
 # # ElevenLabs API Key
-# ELEVENLABS_API_KEY = "sk_13330e107d319d4f75ab5e197f48d174e10520e1e6713e19"
+# ELEVENLABS_API_KEY = ""
 
 # # Voice generation backend: "elevenlabs" or "openvoice"
 # VOICE_BACKEND = "openvoice"  # Change to "openvoice" when ready
